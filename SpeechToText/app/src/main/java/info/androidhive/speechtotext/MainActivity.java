@@ -66,6 +66,8 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	
+
 	/**
 	 * Receiving speech input
 	 * */
