@@ -4,7 +4,15 @@
         "source": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/src/main/res/drawable-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xhdpi/ico_mic.png",
+        "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-xhdpi/ico_mic.png"
+    },
+    {
         "merged": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xhdpi/ico_mic.png",
         "source": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/src/main/res/drawable-xhdpi/ico_mic.png"
+    },
+    {
+        "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png",
+        "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-xhdpi/ic_launcher.png"
     }
 ]

@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
 		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
-		txtMood = (TextView)findViewById(R.id.txtMood);
+		//txtMood = (TextView)findViewById(R.id.txtMood);
 
 		// hide the action bar
 		getActionBar().hide();
