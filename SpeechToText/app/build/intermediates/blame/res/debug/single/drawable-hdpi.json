@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_launcher.png",
+        "source": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/res/merged/debug/drawable-hdpi/ico_mic.png",
+        "source": "/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/src/main/res/drawable-hdpi/ico_mic.png"
+    }
+]

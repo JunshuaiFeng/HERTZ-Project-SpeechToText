@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-sdk-0.1.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/android-sdk/0.1.0/c9a2827631e34c2740e65f593eb4e3187b4050fa/android-sdk-0.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

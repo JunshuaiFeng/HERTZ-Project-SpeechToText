@@ -1,0 +1,7 @@
+#Fri Oct 14 20:58:45 EDT 2016
+base.0=/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f2aad5ef96f35561de766e43a3cbf3c28f6738cd
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4bbb7f8ecfcb90a602ab8c951383765a8f3d7f03/classes.dex
+base.1=/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_4bbb7f8ecfcb90a602ab8c951383765a8f3d7f03
+file.0=/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f2aad5ef96f35561de766e43a3cbf3c28f6738cd/classes.dex
