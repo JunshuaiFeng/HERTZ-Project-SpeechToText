@@ -4,40 +4,56 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="119208655190003"
-    token="-3495852598191037121"
+    timestamp="82448604036993"
+    token="3702221766377394511"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="316" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="51" />
+        duration="0" />
     <task
         name="verifier"
-        duration="4" />
-
-    <artifact
-        location="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-        type="DEX" />
+        duration="0" />
 
     <build
-        timestamp="119036921301989"
+        timestamp="72685422306919"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/outputs/apk/app-debug.apk"
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="119208655190003"
+        timestamp="74089129938999"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
     </build>
+    <build
+        timestamp="81317120965620"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+    </build>
+    <build
+        timestamp="82260424604775"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="82448604036993"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>
