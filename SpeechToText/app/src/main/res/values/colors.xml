@@ -2,6 +2,8 @@
 <resources>
     <color name="white">#ffffff</color>
     <color name="yellow">#F2E631</color>
-    <color name="bg_gradient_start">#31244e</color>
-    <color name="bg_gradient_end">#6b394c</color>
+    <color name="bg_gradient_start">#212015</color>
+    <color name="bg_gradient_end">#3F3274</color>
+    <color name="bg_gradient_start2">#31244e</color>
+    <color name="bg_gradient_end2">#6b394c</color>
 </resources>

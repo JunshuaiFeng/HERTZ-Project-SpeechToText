@@ -1525,28 +1525,28 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f080004;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f09003e;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f09003f;
-        public static final int abc_btn_colored_borderless_text_material=0x7f090040;
-        public static final int abc_color_highlight_material=0x7f090041;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f090040;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f090041;
+        public static final int abc_btn_colored_borderless_text_material=0x7f090042;
+        public static final int abc_color_highlight_material=0x7f090043;
         public static final int abc_input_method_navigation_guard=0x7f090000;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f090042;
-        public static final int abc_primary_text_disable_only_material_light=0x7f090043;
-        public static final int abc_primary_text_material_dark=0x7f090044;
-        public static final int abc_primary_text_material_light=0x7f090045;
-        public static final int abc_search_url_text=0x7f090046;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f090044;
+        public static final int abc_primary_text_disable_only_material_light=0x7f090045;
+        public static final int abc_primary_text_material_dark=0x7f090046;
+        public static final int abc_primary_text_material_light=0x7f090047;
+        public static final int abc_search_url_text=0x7f090048;
         public static final int abc_search_url_text_normal=0x7f090001;
         public static final int abc_search_url_text_pressed=0x7f090002;
         public static final int abc_search_url_text_selected=0x7f090003;
-        public static final int abc_secondary_text_material_dark=0x7f090047;
-        public static final int abc_secondary_text_material_light=0x7f090048;
-        public static final int abc_tint_btn_checkable=0x7f090049;
-        public static final int abc_tint_default=0x7f09004a;
-        public static final int abc_tint_edittext=0x7f09004b;
-        public static final int abc_tint_seek_thumb=0x7f09004c;
-        public static final int abc_tint_spinner=0x7f09004d;
-        public static final int abc_tint_switch_thumb=0x7f09004e;
-        public static final int abc_tint_switch_track=0x7f09004f;
+        public static final int abc_secondary_text_material_dark=0x7f090049;
+        public static final int abc_secondary_text_material_light=0x7f09004a;
+        public static final int abc_tint_btn_checkable=0x7f09004b;
+        public static final int abc_tint_default=0x7f09004c;
+        public static final int abc_tint_edittext=0x7f09004d;
+        public static final int abc_tint_seek_thumb=0x7f09004e;
+        public static final int abc_tint_spinner=0x7f09004f;
+        public static final int abc_tint_switch_thumb=0x7f090050;
+        public static final int abc_tint_switch_track=0x7f090051;
         public static final int accent_material_dark=0x7f090004;
         public static final int accent_material_light=0x7f090005;
         public static final int background_floating_material_dark=0x7f090006;
@@ -1554,59 +1554,61 @@ containing a value of this type.
         public static final int background_material_dark=0x7f090008;
         public static final int background_material_light=0x7f090009;
         public static final int bg_gradient_end=0x7f09000a;
-        public static final int bg_gradient_start=0x7f09000b;
-        public static final int bright_foreground_disabled_material_dark=0x7f09000c;
-        public static final int bright_foreground_disabled_material_light=0x7f09000d;
-        public static final int bright_foreground_inverse_material_dark=0x7f09000e;
-        public static final int bright_foreground_inverse_material_light=0x7f09000f;
-        public static final int bright_foreground_material_dark=0x7f090010;
-        public static final int bright_foreground_material_light=0x7f090011;
-        public static final int button_material_dark=0x7f090012;
-        public static final int button_material_light=0x7f090013;
-        public static final int dim_foreground_disabled_material_dark=0x7f090014;
-        public static final int dim_foreground_disabled_material_light=0x7f090015;
-        public static final int dim_foreground_material_dark=0x7f090016;
-        public static final int dim_foreground_material_light=0x7f090017;
-        public static final int foreground_material_dark=0x7f090018;
-        public static final int foreground_material_light=0x7f090019;
-        public static final int highlighted_text_material_dark=0x7f09001a;
-        public static final int highlighted_text_material_light=0x7f09001b;
-        public static final int hint_foreground_material_dark=0x7f09001c;
-        public static final int hint_foreground_material_light=0x7f09001d;
-        public static final int material_blue_grey_800=0x7f09001e;
-        public static final int material_blue_grey_900=0x7f09001f;
-        public static final int material_blue_grey_950=0x7f090020;
-        public static final int material_deep_teal_200=0x7f090021;
-        public static final int material_deep_teal_500=0x7f090022;
-        public static final int material_grey_100=0x7f090023;
-        public static final int material_grey_300=0x7f090024;
-        public static final int material_grey_50=0x7f090025;
-        public static final int material_grey_600=0x7f090026;
-        public static final int material_grey_800=0x7f090027;
-        public static final int material_grey_850=0x7f090028;
-        public static final int material_grey_900=0x7f090029;
-        public static final int primary_dark_material_dark=0x7f09002a;
-        public static final int primary_dark_material_light=0x7f09002b;
-        public static final int primary_material_dark=0x7f09002c;
-        public static final int primary_material_light=0x7f09002d;
-        public static final int primary_text_default_material_dark=0x7f09002e;
-        public static final int primary_text_default_material_light=0x7f09002f;
-        public static final int primary_text_disabled_material_dark=0x7f090030;
-        public static final int primary_text_disabled_material_light=0x7f090031;
-        public static final int ripple_material_dark=0x7f090032;
-        public static final int ripple_material_light=0x7f090033;
-        public static final int secondary_text_default_material_dark=0x7f090034;
-        public static final int secondary_text_default_material_light=0x7f090035;
-        public static final int secondary_text_disabled_material_dark=0x7f090036;
-        public static final int secondary_text_disabled_material_light=0x7f090037;
-        public static final int switch_thumb_disabled_material_dark=0x7f090038;
-        public static final int switch_thumb_disabled_material_light=0x7f090039;
-        public static final int switch_thumb_material_dark=0x7f090050;
-        public static final int switch_thumb_material_light=0x7f090051;
-        public static final int switch_thumb_normal_material_dark=0x7f09003a;
-        public static final int switch_thumb_normal_material_light=0x7f09003b;
-        public static final int white=0x7f09003c;
-        public static final int yellow=0x7f09003d;
+        public static final int bg_gradient_end2=0x7f09000b;
+        public static final int bg_gradient_start=0x7f09000c;
+        public static final int bg_gradient_start2=0x7f09000d;
+        public static final int bright_foreground_disabled_material_dark=0x7f09000e;
+        public static final int bright_foreground_disabled_material_light=0x7f09000f;
+        public static final int bright_foreground_inverse_material_dark=0x7f090010;
+        public static final int bright_foreground_inverse_material_light=0x7f090011;
+        public static final int bright_foreground_material_dark=0x7f090012;
+        public static final int bright_foreground_material_light=0x7f090013;
+        public static final int button_material_dark=0x7f090014;
+        public static final int button_material_light=0x7f090015;
+        public static final int dim_foreground_disabled_material_dark=0x7f090016;
+        public static final int dim_foreground_disabled_material_light=0x7f090017;
+        public static final int dim_foreground_material_dark=0x7f090018;
+        public static final int dim_foreground_material_light=0x7f090019;
+        public static final int foreground_material_dark=0x7f09001a;
+        public static final int foreground_material_light=0x7f09001b;
+        public static final int highlighted_text_material_dark=0x7f09001c;
+        public static final int highlighted_text_material_light=0x7f09001d;
+        public static final int hint_foreground_material_dark=0x7f09001e;
+        public static final int hint_foreground_material_light=0x7f09001f;
+        public static final int material_blue_grey_800=0x7f090020;
+        public static final int material_blue_grey_900=0x7f090021;
+        public static final int material_blue_grey_950=0x7f090022;
+        public static final int material_deep_teal_200=0x7f090023;
+        public static final int material_deep_teal_500=0x7f090024;
+        public static final int material_grey_100=0x7f090025;
+        public static final int material_grey_300=0x7f090026;
+        public static final int material_grey_50=0x7f090027;
+        public static final int material_grey_600=0x7f090028;
+        public static final int material_grey_800=0x7f090029;
+        public static final int material_grey_850=0x7f09002a;
+        public static final int material_grey_900=0x7f09002b;
+        public static final int primary_dark_material_dark=0x7f09002c;
+        public static final int primary_dark_material_light=0x7f09002d;
+        public static final int primary_material_dark=0x7f09002e;
+        public static final int primary_material_light=0x7f09002f;
+        public static final int primary_text_default_material_dark=0x7f090030;
+        public static final int primary_text_default_material_light=0x7f090031;
+        public static final int primary_text_disabled_material_dark=0x7f090032;
+        public static final int primary_text_disabled_material_light=0x7f090033;
+        public static final int ripple_material_dark=0x7f090034;
+        public static final int ripple_material_light=0x7f090035;
+        public static final int secondary_text_default_material_dark=0x7f090036;
+        public static final int secondary_text_default_material_light=0x7f090037;
+        public static final int secondary_text_disabled_material_dark=0x7f090038;
+        public static final int secondary_text_disabled_material_light=0x7f090039;
+        public static final int switch_thumb_disabled_material_dark=0x7f09003a;
+        public static final int switch_thumb_disabled_material_light=0x7f09003b;
+        public static final int switch_thumb_material_dark=0x7f090052;
+        public static final int switch_thumb_material_light=0x7f090053;
+        public static final int switch_thumb_normal_material_dark=0x7f09003c;
+        public static final int switch_thumb_normal_material_light=0x7f09003d;
+        public static final int white=0x7f09003e;
+        public static final int yellow=0x7f09003f;
     }
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material=0x7f06000c;
@@ -1982,15 +1984,8 @@ containing a value of this type.
         public static final int Animation_AppCompat_DropDownUp=0x7f07008e;
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
          */
         public static final int AppBaseTheme=0x7f07000b;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f07008f;
         public static final int Base_AlertDialog_AppCompat=0x7f070090;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f070091;

@@ -1,6 +1,8 @@
 package info.androidhive.speechtotext;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Locale;
 
 import android.app.Activity;
@@ -13,16 +15,29 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.ibm.watson.developer_cloud.tone_analyzer.v3.ToneAnalyzer;
-import com.ibm.watson.developer_cloud.tone_analyzer.v3.model.ToneAnalysis;
+
+import com.ibm.watson.developer_cloud.conversation.v1.ConversationService;
+import com.ibm.watson.developer_cloud.conversation.v1.model.MessageRequest;
+import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
+import com.ibm.watson.developer_cloud.http.ServiceCallback;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 public class MainActivity extends Activity {
 
-	private TextView txtSpeechInput;
+	private TextView txtSpeechInput, txtResponse;
 	private ImageButton btnSpeak;
 	private final int REQ_CODE_SPEECH_INPUT = 100;
-	private TextView txtMood;
+	//private TextView txtMood;
+
+	ConversationService service = new ConversationService("2016-09-20");
+	MessageRequest newMessage;
+	MessageResponse response;
+
+	String textResult;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +46,14 @@ public class MainActivity extends Activity {
 
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
 		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
-		//txtMood = (TextView)findViewById(R.id.txtMood);
+		txtResponse = (TextView)findViewById(R.id.txtResponse);
 
 		// hide the action bar
 		getActionBar().hide();
+
+
+
+
 
 		btnSpeak.setOnClickListener(new View.OnClickListener() {
 
@@ -66,7 +85,7 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	
+
 
 	/**
 	 * Receiving speech input
@@ -74,7 +93,8 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-
+		String workspaceId = "a12e9223-d15b-4bb9-a774-47720827580d";
+		service.setUsernameAndPassword("90099f72-f54c-4a4f-a344-b92becd9805e", "J2Z0AURpOe3s");
 		switch (requestCode) {
 		case REQ_CODE_SPEECH_INPUT: {
 			if (resultCode == RESULT_OK && null != data) {
@@ -84,6 +104,50 @@ public class MainActivity extends Activity {
 				txtSpeechInput.setText(result.get(0));
 
 
+				newMessage = new MessageRequest.Builder()
+						.inputText(result.get(0))
+						// Replace with the context obtained from the initial request
+						//.context(...)
+						.build();
+				//response = service.message(workspaceId, newMessage).execute();
+
+				service.message(workspaceId, newMessage).enqueue(new ServiceCallback<MessageResponse>() {
+					@Override
+					public void onResponse(MessageResponse response) {
+						System.out.println(response);
+						String string =  response.toString();
+						try {
+							JSONObject root = new JSONObject(string);
+							JSONObject output = new JSONObject(root.getString("output"));
+							JSONArray text = new JSONArray(output.getString("text"));
+
+							int i = 0;
+							if(text.getString(i)==""){
+								i=1;
+							}
+								textResult = text.getString(i);
+								System.out.println("THE TEXT IS: "+textResult);
+
+
+							//System.out.println(textResult);
+
+
+						}catch(Exception ex){
+
+							}
+						}
+
+
+
+					@Override
+					public void onFailure(Exception e) {
+
+					}
+
+
+			});
+
+				txtResponse.setText(textResult);
 
 			}
 			break;
