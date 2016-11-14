@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "info.androidhive.speechtotext"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 24
     }
 
@@ -24,6 +24,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.ibm.watson.developer_cloud:android-sdk:0.1.0'
+    compile 'com.ibm.watson.developer_cloud:android-sdk:0.2.0'
+    compile 'com.ibm.watson.developer_cloud:java-sdk:3.5.1'
     testCompile 'junit:junit:4.12'
 }

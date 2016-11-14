@@ -3,7 +3,7 @@
     package="info.androidhive.speechtotext.test" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="21"
         android:targetSdkVersion="24" />
 
     <instrumentation

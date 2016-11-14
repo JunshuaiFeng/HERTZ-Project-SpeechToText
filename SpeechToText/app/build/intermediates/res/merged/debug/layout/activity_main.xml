@@ -7,27 +7,30 @@
 
     <TextView
         android:id="@+id/txtSpeechInput"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:textColor="@color/white"
-        android:textSize="26dp"
+        android:textSize="25dp"
         android:textStyle="normal"
         android:textAlignment="center" />
 
     <TextView
         android:id="@+id/txtResponse"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200dp"
         android:textColor="@color/yellow"
-        android:textSize="15dp"
+        android:textSize="20dp"
         android:textStyle="normal"
-        android:textAlignment="center" />
+        android:maxLines="3"
+        android:lines="3"
+        android:textAlignment="center"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -54,5 +57,28 @@
             android:textSize="15dp"
             android:textStyle="normal" />
     </LinearLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/edtInput"
+        android:textColor="@android:color/white"
+        android:ems="10"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtResponse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:id="@+id/edtButton"
+        android:visibility="invisible"
+        />
 
 </RelativeLayout>

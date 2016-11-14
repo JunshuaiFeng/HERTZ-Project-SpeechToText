@@ -1,4 +1,4 @@
-#Wed Nov 09 21:07:03 EST 2016
+#Sun Nov 13 23:10:45 EST 2016
 base.0=/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1e9695050e1204119b13f37ed3914fb163de6987
 renamed.1=classes.dex
 renamed.0=classes2.dex

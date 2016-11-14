@@ -25,7 +25,7 @@ ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManife
 		ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml:7:22-76
 uses-sdk
 ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml:9:5-11:41
-MERGED from [com.ibm.watson.developer_cloud:android-sdk:0.1.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.ibm.watson.developer_cloud:android-sdk:0.2.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.2.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-compat:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:21:5-23:58
@@ -47,7 +47,7 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/joeluon
 		INJECTED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml:13:5-27:19
-MERGED from [com.ibm.watson.developer_cloud:android-sdk:0.1.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/AndroidManifest.xml:11:5-15:19
+MERGED from [com.ibm.watson.developer_cloud:android-sdk:0.2.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.2.0/AndroidManifest.xml:11:5-15:19
 MERGED from [com.android.support:appcompat-v7:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-v4:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.1] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/AndroidManifest.xml:25:5-20
@@ -60,7 +60,7 @@ MERGED from [com.android.support:animated-vector-drawable:24.2.1] /Users/joeluon
 	android:label
 		ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml:16:9-41
 	android:supportsRtl
-		ADDED from [com.ibm.watson.developer_cloud:android-sdk:0.1.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/AndroidManifest.xml:14:9-35
+		ADDED from [com.ibm.watson.developer_cloud:android-sdk:0.2.0] /Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.2.0/AndroidManifest.xml:14:9-35
 	android:allowBackup
 		ADDED from /Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/AndroidManifest.xml:14:9-35
 	android:icon
