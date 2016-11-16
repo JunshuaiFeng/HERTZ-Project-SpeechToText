@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,13 +22,12 @@
         android:id="@+id/txtResponse"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:textColor="@color/yellow"
         android:textSize="20dp"
-        android:textStyle="normal"
+        android:textStyle="normal|italic"
         android:maxLines="3"
         android:lines="3"
         android:textAlignment="center"/>
@@ -80,5 +80,15 @@
         android:id="@+id/edtButton"
         android:visibility="invisible"
         />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnStopMusic"
+        android:background="@drawable/pause96"
+        android:visibility="invisible"/>
+
 
 </RelativeLayout>
