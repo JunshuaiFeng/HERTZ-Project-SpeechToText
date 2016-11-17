@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Locale;
 
 import android.annotation.TargetApi;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -48,7 +49,10 @@ public class MainActivity extends Activity {
 	private ImageButton btnSpeak;
 	private EditText edtInput;
 	private Button edtButton;
+	private ImageButton btnStopMusic;
 	private final int REQ_CODE_SPEECH_INPUT = 100;
+	MediaPlayer mp;
+	boolean playingMusic = false;
 
 
 	ConversationService service = new ConversationService("2016-09-20");
@@ -88,7 +92,7 @@ public class MainActivity extends Activity {
 		txtResponse = (TextView)findViewById(R.id.txtResponse);
 		edtInput = (EditText)findViewById(R.id.edtInput);
 		edtButton = (Button)findViewById(R.id.edtButton);
-		//textService = initTextToSpeechService();
+		btnStopMusic = (ImageButton) findViewById(R.id.btnStopMusic);
 
 
 		// hide the action bar
@@ -101,12 +105,6 @@ public class MainActivity extends Activity {
 				int result = t1.setLanguage(Locale.US);
 				if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
 
-				}
-				//speak("Hello");
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-					ttsGreater21("Hello");
-				} else {
-					ttsUnder20("Hello");
 				}
 
 			} else {
@@ -121,8 +119,25 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				btnStopMusic.setVisibility(View.INVISIBLE);
 				promptSpeechInput();
 
+			}
+		});
+
+		btnStopMusic.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(playingMusic == true){
+					//mp.seekTo(0);
+					mp.pause();
+					btnStopMusic.setBackgroundResource(R.drawable.play96);
+					playingMusic = false;
+				}else {
+					mp.start();
+					btnStopMusic.setBackgroundResource(R.drawable.pause96);
+					playingMusic = true;
+				}
 			}
 		});
 
@@ -155,8 +170,6 @@ public class MainActivity extends Activity {
 							txtResponse.setText(String.valueOf(textResult));
 
 							RESPONSE = textResult.toString();
-
-
 
 
 						}catch(Exception ex){
@@ -274,6 +287,18 @@ public class MainActivity extends Activity {
 						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
 					}
 				}, 1000);
+
+				handler.postDelayed(new Runnable() {
+					@Override
+					public void run() {
+						if (String.valueOf(textResult).startsWith("Great choice! Playing some")){
+							mp = MediaPlayer.create(MainActivity.this, R.raw.janji_heroes_tonight);
+							mp.start();
+							btnStopMusic.setVisibility(View.VISIBLE);
+							playingMusic = true;
+						}
+					}
+				}, 4000);
 
 			}
 			break;
