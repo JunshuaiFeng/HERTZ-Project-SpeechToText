@@ -1,10 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/bg_gradient"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/txtSpeechInput"
@@ -90,5 +91,37 @@
         android:background="@drawable/pause96"
         android:visibility="invisible"/>
 
+    <TextView
+        android:text="Temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtTemp"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:textSize="24sp"
+        android:textStyle="normal|bold|italic" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtTemp"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/help52"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+
+        app:backgroundTint="@color/yellow" />
+
+    <include layout="@layout/fab_layout"/>
 
 </RelativeLayout>

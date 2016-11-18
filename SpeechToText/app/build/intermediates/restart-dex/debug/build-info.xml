@@ -4,55 +4,37 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="6718898230993"
+    timestamp="15164575649901"
     token="3702221766377394511"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="559" />
+        duration="352" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="54" />
+        duration="85" />
     <task
         name="verifier"
-        duration="4" />
+        duration="22" />
 
-    <artifact
-        location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
     <artifact
         location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="6017218472791"
-        verifier="FULL_BUILD_REQUESTED" >
+        timestamp="14986677667761"
+        verifier="MANIFEST_FILE_CHANGE" >
         <artifact
             location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="6718898230993"
+        timestamp="15164575649901"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
         <artifact
             location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />

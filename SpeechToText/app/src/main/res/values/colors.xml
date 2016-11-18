@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
-    <color name="yellow">#f2e631</color>
+    <color name="yellow">#f9ed2e</color>
     <color name="bg_gradient_start">#212015</color>
     <color name="bg_gradient_end">#190f42</color>
     <color name="bg_gradient_start2">#31244e</color>

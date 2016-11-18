@@ -1,16 +1,28 @@
 package info.androidhive.speechtotext;
 
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
+import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -19,18 +31,23 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.speech.tts.TextToSpeech;
 
 
-
-
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.ibm.watson.developer_cloud.android.library.audio.StreamPlayer;
 import com.ibm.watson.developer_cloud.conversation.v1.ConversationService;
 import com.ibm.watson.developer_cloud.conversation.v1.model.MessageRequest;
@@ -38,14 +55,20 @@ import com.ibm.watson.developer_cloud.conversation.v1.model.MessageResponse;
 import com.ibm.watson.developer_cloud.http.ServiceCallback;
 //import com.ibm.watson.developer_cloud.text_to_speech.v1.TextToSpeech;
 import com.ibm.watson.developer_cloud.text_to_speech.v1.model.Voice;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import info.androidhive.speechtotext.Common.Common;
+import info.androidhive.speechtotext.Helper.Helper;
+import info.androidhive.speechtotext.Model.OpenWeatherMap;
 
-public class MainActivity extends Activity {
 
-	private TextView txtSpeechInput, txtResponse;
+public class MainActivity extends AppCompatActivity implements LocationListener {
+
+	private TextView txtSpeechInput, txtResponse, txtTemp;
+	ImageView imageView;
 	private ImageButton btnSpeak;
 	private EditText edtInput;
 	private Button edtButton;
@@ -67,6 +90,19 @@ public class MainActivity extends Activity {
 	String context;
 	static String RESPONSE;
 
+	//Weather
+	LocationManager locationManager;
+	String provider;
+	static double lat, lng;
+	OpenWeatherMap openWeatherMap = new OpenWeatherMap();
+
+	int MY_PERMISSION = 0;
+
+	//Floating Buttons
+	FloatingActionButton fab, fab_Left, fab_Top;
+	Animation Move_Left, Move_Top, Back_Left, Back_Top;
+	boolean moveBack = false;
+
 	@SuppressWarnings("deprecation")
 	private void ttsUnder20(String text) {
 		HashMap<String, String> map = new HashMap<>();
@@ -76,10 +112,9 @@ public class MainActivity extends Activity {
 
 	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 	private void ttsGreater21(String text) {
-		String utteranceId=this.hashCode() + "";
+		String utteranceId = this.hashCode() + "";
 		t1.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
 	}
-
 
 
 	@Override
@@ -89,14 +124,63 @@ public class MainActivity extends Activity {
 
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
 		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
-		txtResponse = (TextView)findViewById(R.id.txtResponse);
-		edtInput = (EditText)findViewById(R.id.edtInput);
-		edtButton = (Button)findViewById(R.id.edtButton);
+		txtResponse = (TextView) findViewById(R.id.txtResponse);
+		edtInput = (EditText) findViewById(R.id.edtInput);
+		edtButton = (Button) findViewById(R.id.edtButton);
 		btnStopMusic = (ImageButton) findViewById(R.id.btnStopMusic);
+		txtTemp = (TextView) findViewById(R.id.txtTemp);
+		imageView = (ImageView) findViewById(R.id.imageView);
+		fab = (FloatingActionButton) findViewById(R.id.fab);
+		fab_Left = (FloatingActionButton) findViewById(R.id.fab_Left);
+		fab_Top = (FloatingActionButton) findViewById(R.id.fab_Top);
 
+		Move_Left = AnimationUtils.loadAnimation(this, R.anim.move_left);
+		Move_Top = AnimationUtils.loadAnimation(this, R.anim.move_top);
+
+		Back_Left = AnimationUtils.loadAnimation(this, R.anim.back_left);
+		Back_Top = AnimationUtils.loadAnimation(this, R.anim.back_top);
+
+		fab.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (moveBack == false) {
+					Move();
+					moveBack = true;
+				} else {
+					Back();
+					moveBack = false;
+				}
+			}
+		});
+
+		fab_Left.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent callIntent = new Intent(Intent.ACTION_CALL);
+				callIntent.setData(Uri.parse("tel:123456789"));
+				if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+					// TODO: Consider calling
+					//    ActivityCompat#requestPermissions
+					// here to request the missing permissions, and then overriding
+					//   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+					//                                          int[] grantResults)
+					// to handle the case where the user grants the permission. See the documentation
+					// for ActivityCompat#requestPermissions for more details.
+					return;
+				}
+				startActivity(callIntent);
+			}
+		});
+
+		fab_Top.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(MainActivity.this,"Top Button Clicked",Toast.LENGTH_SHORT).show();
+			}
+		});
 
 		// hide the action bar
-		getActionBar().hide();
+		//getActionBar().hide();
 
 
 		t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -113,6 +197,29 @@ public class MainActivity extends Activity {
 			}
 		});
 
+		//Get Coordinates
+		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		provider = locationManager.getBestProvider(new Criteria(), false);
+
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+
+			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+					Manifest.permission.INTERNET,
+					Manifest.permission.ACCESS_COARSE_LOCATION,
+					Manifest.permission.ACCESS_FINE_LOCATION,
+					Manifest.permission.ACCESS_NETWORK_STATE,
+					Manifest.permission.SYSTEM_ALERT_WINDOW,
+					Manifest.permission.WRITE_EXTERNAL_STORAGE
+
+
+			}, MY_PERMISSION);
+		}
+		Location location = locationManager.getLastKnownLocation(provider);
+		if (location == null)
+			Log.e("TAG","No Location");
+		lat = location.getLatitude();
+		lng = location.getLongitude();
 
 
 		btnSpeak.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +227,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				btnStopMusic.setVisibility(View.INVISIBLE);
+				txtTemp.setVisibility(View.INVISIBLE);
 				promptSpeechInput();
 
 			}
@@ -144,58 +252,8 @@ public class MainActivity extends Activity {
 		edtButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String workspaceId = "a12e9223-d15b-4bb9-a774-47720827580d";
-				service.setUsernameAndPassword("90099f72-f54c-4a4f-a344-b92becd9805e", "J2Z0AURpOe3s");
-				newMessage = new MessageRequest.Builder()
-						.inputText(edtInput.getText().toString())
-						// Replace with the context obtained from the initial request
-						//.context(...)
-						.build();
-				//response = service.message(workspaceId, newMessage).execute();
 
-				service.message(workspaceId, newMessage).enqueue(new ServiceCallback<MessageResponse>() {
-					@Override
-					public void onResponse(MessageResponse response) {
-						System.out.println(response);
-						String string =  response.toString();
-						try {
-							JSONObject root = new JSONObject(string);
-							JSONObject output = new JSONObject(root.getString("output"));
-							JSONArray text = new JSONArray(output.getString("text"));
-
-							for(int i = 0; i< text.length();i++) {
-								textResult = text.getString(i);
-								System.out.println("THE TEXT IS: " + textResult);
-							}
-							txtResponse.setText(String.valueOf(textResult));
-
-							RESPONSE = textResult.toString();
-
-
-						}catch(Exception ex){
-
-						}
-					}
-
-
-
-					@Override
-					public void onFailure(Exception e) {
-
-					}
-
-
-				});
-				Handler handler = new Handler();
-				handler.postDelayed(new Runnable() {
-					public void run() {
-						// Actions to do after 1 seconds
-						String utteranceId=this.hashCode() + "";
-						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
-					}
-				}, 1000);
-
-
+				new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
 			}
 		});
 	}
@@ -262,8 +320,6 @@ public class MainActivity extends Activity {
 								System.out.println("THE TEXT IS: " + textResult);
 							}
 
-
-
 						}catch(Exception ex){
 
 							}
@@ -285,6 +341,7 @@ public class MainActivity extends Activity {
 						txtResponse.setText(String.valueOf(textResult));
 						String utteranceId=this.hashCode() + "";
 						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+
 					}
 				}, 1000);
 
@@ -297,6 +354,11 @@ public class MainActivity extends Activity {
 							btnStopMusic.setVisibility(View.VISIBLE);
 							playingMusic = true;
 						}
+						if(String.valueOf(textResult).startsWith("Finding information about current weather")){
+							new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
+							txtTemp.setVisibility(View.VISIBLE);
+						}
+
 					}
 				}, 4000);
 
@@ -314,4 +376,145 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	@Override
+	public void onLocationChanged(Location location) {
+		lat = location.getLatitude();
+		lng = location.getLongitude();
+
+		//new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lng)));
+	}
+
+	@Override
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+
+	}
+
+	@Override
+	public void onProviderEnabled(String provider) {
+
+	}
+
+	@Override
+	public void onProviderDisabled(String provider) {
+
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+					Manifest.permission.INTERNET,
+					Manifest.permission.ACCESS_COARSE_LOCATION,
+					Manifest.permission.ACCESS_FINE_LOCATION,
+					Manifest.permission.ACCESS_NETWORK_STATE,
+					Manifest.permission.SYSTEM_ALERT_WINDOW,
+					Manifest.permission.WRITE_EXTERNAL_STORAGE
+
+
+			}, MY_PERMISSION);
+		}
+		locationManager.removeUpdates(this);
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+					Manifest.permission.INTERNET,
+					Manifest.permission.ACCESS_COARSE_LOCATION,
+					Manifest.permission.ACCESS_FINE_LOCATION,
+					Manifest.permission.ACCESS_NETWORK_STATE,
+					Manifest.permission.SYSTEM_ALERT_WINDOW,
+					Manifest.permission.WRITE_EXTERNAL_STORAGE
+
+
+			}, MY_PERMISSION);
+		}
+		locationManager.requestLocationUpdates(provider, 400, 1, this);
+	}
+
+	private void Move(){
+		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
+		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
+
+		paramsLeft.rightMargin = (int) (fab_Left.getWidth() * 1.3);
+		paramsTop.bottomMargin = (int) (fab_Top.getHeight() * 1.3);
+
+		fab.setSize(FloatingActionButton.SIZE_MINI);
+
+		fab_Left.setLayoutParams(paramsLeft);
+		fab_Left.startAnimation(Move_Left);
+
+		fab_Top.setLayoutParams(paramsTop);
+		fab_Top.startAnimation(Move_Top);
+
+	}
+
+	private void Back(){
+		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
+		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
+
+		paramsLeft.rightMargin -= (int) (fab_Left.getWidth() * 1.3);
+		paramsTop.bottomMargin -= (int) (fab_Top.getHeight() * 1.3);
+
+		fab.setSize(FloatingActionButton.SIZE_AUTO);
+
+		fab_Left.setLayoutParams(paramsLeft);
+		fab_Left.startAnimation(Back_Left);
+
+		fab_Top.setLayoutParams(paramsTop);
+		fab_Top.startAnimation(Back_Top);
+
+		fab_Top.setVisibility(View.INVISIBLE);
+		fab_Left.setVisibility(View.INVISIBLE);
+	}
+
+	private class GetWeather extends AsyncTask<String,Void,String>{
+		ProgressDialog pd = new ProgressDialog(MainActivity.this);
+
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			pd.setTitle("Please wait...");
+			pd.show();
+
+		}
+
+
+		@Override
+		protected String doInBackground(String... params) {
+			String stream = null;
+			String urlString = params[0];
+
+			Helper http = new Helper();
+			stream = http.getHTTPData(urlString);
+			return stream;
+		}
+
+		@Override
+		protected void onPostExecute(String s) {
+			super.onPostExecute(s);
+			if(s.contains("Error: Not found city")){
+				pd.dismiss();
+				return;
+			}
+			Gson gson = new Gson();
+			Type mType = new TypeToken<OpenWeatherMap>(){}.getType();
+			openWeatherMap = gson.fromJson(s,mType);
+			pd.dismiss();
+
+			//txtCity.setText(String.format("%s,%s",openWeatherMap.getName(),openWeatherMap.getSys().getCountry()));
+			//txtLastUpdate.setText(String.format("Last Updated: %s", Common.getDateNow()));
+			//txtDescription.setText(String.format("%s",openWeatherMap.getWeather().get(0).getDescription()));
+			//txtHumidity.setText(String.format("%d%%",openWeatherMap.getMain().getHumidity()));
+			//txtTime.setText(String.format("%s/%s",Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunrise()),Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunset())));
+			txtTemp.setText(String.format("%.2f °C",openWeatherMap.getMain().getTemp()));
+			Picasso.with(MainActivity.this).load(Common.getImage(openWeatherMap.getWeather().get(0).getIcon())).into(imageView);
+
+		}
+
+	}
 }
