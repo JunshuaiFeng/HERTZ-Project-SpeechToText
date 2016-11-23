@@ -21,6 +21,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -216,10 +217,31 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 			}, MY_PERMISSION);
 		}
 		Location location = locationManager.getLastKnownLocation(provider);
-		if (location == null)
+
+		Criteria locationCritera = new Criteria();
+		locationCritera.setAccuracy(Criteria.ACCURACY_COARSE);
+		locationCritera.setAltitudeRequired(false);
+		locationCritera.setBearingRequired(false);
+		locationCritera.setCostAllowed(true);
+		locationCritera.setPowerRequirement(Criteria.NO_REQUIREMENT);
+
+		String providerName = locationManager.getBestProvider(locationCritera, true);
+
+		/*if (location == null)
 			Log.e("TAG","No Location");
-		lat = location.getLatitude();
-		lng = location.getLongitude();
+		*/
+
+		if (providerName != null && locationManager.isProviderEnabled(providerName)) {
+			// Provider is enabled
+			locationManager.requestLocationUpdates(providerName, 20000, 100, this.locationListener);
+			//lat = location.getLatitude();
+			//lng = location.getLongitude();
+		} else {
+			// Provider not enabled, prompt user to enable it
+			Toast.makeText(this, "Turn on the GPS", Toast.LENGTH_LONG).show();
+			Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+			this.startActivity(myIntent);
+		}
 
 
 		btnSpeak.setOnClickListener(new View.OnClickListener() {
@@ -375,6 +397,27 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
+
+	private final LocationListener locationListener = new LocationListener() {
+
+		@Override
+		public void onLocationChanged(Location location) {
+			//this.gpsLocationReceived(location);
+			new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lng)));
+		}
+
+		@Override
+		public void onProviderDisabled(String provider) {}
+
+		@Override
+		public void onProviderEnabled(String provider) {}
+
+		@Override
+		public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+	};
+
 
 	@Override
 	public void onLocationChanged(Location location) {

@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/menu/main.xml"
+    },
+    {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/menu/main.xml"
     }

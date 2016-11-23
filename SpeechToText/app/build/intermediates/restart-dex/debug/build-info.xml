@@ -4,39 +4,39 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="15164575649901"
+    timestamp="70736262182278"
     token="3702221766377394511"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="352" />
+        duration="343" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="85" />
+        duration="47" />
     <task
         name="verifier"
-        duration="22" />
+        duration="2" />
 
     <artifact
-        location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        location="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="14986677667761"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="70014555264159"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/outputs/apk/app-debug.apk"
+            location="/Users/joeluong/root/SpeechToText/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="15164575649901"
+        timestamp="70736262182278"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            location="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />
     </build>
 
