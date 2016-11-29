@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -157,8 +157,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		fab_Left.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				Toast.makeText(MainActivity.this,"Calling Hertz Customer Service",Toast.LENGTH_SHORT).show();
 				Intent callIntent = new Intent(Intent.ACTION_CALL);
-				callIntent.setData(Uri.parse("tel:123456789"));
+				callIntent.setData(Uri.parse("tel:8006544173"));
 				if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 					// TODO: Consider calling
 					//    ActivityCompat#requestPermissions
@@ -176,7 +177,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		fab_Top.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(MainActivity.this,"Top Button Clicked",Toast.LENGTH_SHORT).show();
+				//Toast.makeText(MainActivity.this,"Top Button Clicked",Toast.LENGTH_SHORT).show();
+				Intent myIntent = new Intent(MainActivity.this, QuestionList.class);
+				startActivityForResult(myIntent, 0);
 			}
 		});
 
@@ -250,6 +253,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 			public void onClick(View v) {
 				btnStopMusic.setVisibility(View.INVISIBLE);
 				txtTemp.setVisibility(View.INVISIBLE);
+				imageView.setVisibility(View.INVISIBLE);
 				promptSpeechInput();
 
 			}
@@ -379,6 +383,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 						if(String.valueOf(textResult).startsWith("Finding information about current weather")){
 							new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
 							txtTemp.setVisibility(View.VISIBLE);
+							imageView.setVisibility(View.VISIBLE);
 						}
 
 					}

@@ -109,6 +109,7 @@
         android:id="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/txtTemp"
+        android:visibility="invisible"
         />
 
     <android.support.design.widget.FloatingActionButton

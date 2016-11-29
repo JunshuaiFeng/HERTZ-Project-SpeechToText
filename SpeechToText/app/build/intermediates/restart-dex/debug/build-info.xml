@@ -4,40 +4,50 @@
     density="560dpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="70736262182278"
+    timestamp="207746487165742"
     token="3702221766377394511"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="343" />
+        duration="666" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="1777" />
     <task
         name="instant-run-transform"
-        duration="47" />
+        duration="260" />
     <task
         name="verifier"
-        duration="2" />
+        duration="25" />
 
     <artifact
-        location="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-        type="DEX" />
+        location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="70014555264159"
+        timestamp="204908701551859"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/joeluong/root/SpeechToText/app/build/outputs/apk/app-debug.apk"
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="70736262182278"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="207505851737362"
+        verifier="R_CLASS_CHANGE" >
         <artifact
-            location="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="207746487165742"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

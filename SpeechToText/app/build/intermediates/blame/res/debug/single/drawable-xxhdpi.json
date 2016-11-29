@@ -1,19 +1,7 @@
 [
     {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/pause96.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-xxhdpi/pause96.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/play96.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-xxhdpi/play96.png"
-    },
-    {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/pause96.png",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-xxhdpi/pause96.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/play48.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-xxhdpi/play48.png"
     },
     {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
@@ -24,16 +12,8 @@
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-xxhdpi/ico_mic.png"
     },
     {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ico_mic.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-xxhdpi/ico_mic.png"
-    },
-    {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/play96.png",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-xxhdpi/play96.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_launcher.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-xxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-xxhdpi/play48.png",

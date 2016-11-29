@@ -417,21 +417,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d325fb16c1ce985bb2890b552dd635bc92b9ebfe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="867dad63c33388ff8c7644b236579355036d075f">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_988e4befbc5888cbcf2b35510e4ae5b99c75f406/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d325fb16c1ce985bb2890b552dd635bc92b9ebfe/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -511,7 +511,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="6c36f123628743ce0b381cda34931dbe434bebb6">
+        sha1="d249a8c7b3b9d386e8d421178300ee40d1274761">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1e9695050e1204119b13f37ed3914fb163de6987/classes.dex" />
     </item>
     <item
@@ -574,7 +574,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="7cbb35b5e2b63aa71dcf44954167c772134d73e7">
+        sha1="4f71197d29d4a2a1064f333feb92b34a5aee92dd">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8f9cd42c967f4f1cbc05a441c2ab0f915bb80739/classes.dex" />
     </item>
     <item
@@ -606,21 +606,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_55d344ec02705fd5fb3b20e8dc827c1bd0519001/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_83a644439b4792465cf6f0d9ffa9220971f412d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_55d344ec02705fd5fb3b20e8dc827c1bd0519001/classes.dex" />
     </item>
     <item
         is-multidex="true"

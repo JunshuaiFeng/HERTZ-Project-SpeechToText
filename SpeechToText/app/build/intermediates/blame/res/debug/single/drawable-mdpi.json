@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/play96.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-mdpi/play96.png"
-    },
-    {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/play96.png",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-mdpi/play96.png"
     },
@@ -12,16 +8,8 @@
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-mdpi/play48.png"
     },
     {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/ico_mic.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-mdpi/ico_mic.png"
-    },
-    {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/pause96.png",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-mdpi/pause96.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/play48.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-mdpi/play48.png"
     },
     {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
@@ -30,13 +18,5 @@
     {
         "merged": "/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/ico_mic.png",
         "source": "/Users/joeluong/HERTZ-Project/SpeechToText/app/src/main/res/drawable-mdpi/ico_mic.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/joeluong/root/SpeechToText/app/build/intermediates/res/merged/debug/drawable-mdpi/pause96.png",
-        "source": "/Users/joeluong/root/SpeechToText/app/src/main/res/drawable-mdpi/pause96.png"
     }
 ]
