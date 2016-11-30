@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
 
 					}
-				}, 1000);
+				}, 2500);
 
 				handler.postDelayed(new Runnable() {
 					@Override
@@ -387,7 +387,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 						}
 
 					}
-				}, 4000);
+				}, 5500);
 
 			}
 			break;
