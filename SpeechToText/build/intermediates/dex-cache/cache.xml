@@ -511,7 +511,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="d249a8c7b3b9d386e8d421178300ee40d1274761">
+        sha1="0a2b52b710e3e3a3d8c392198b06c1d9c07504c3">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1e9695050e1204119b13f37ed3914fb163de6987/classes.dex" />
     </item>
     <item
@@ -574,7 +574,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="4f71197d29d4a2a1064f333feb92b34a5aee92dd">
+        sha1="cd2902f3676ef9ff826040870525715b25758f0a">
         <dex dex="/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8f9cd42c967f4f1cbc05a441c2ab0f915bb80739/classes.dex" />
     </item>
     <item

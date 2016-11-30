@@ -2625,7 +2625,7 @@ containing a value of this type.
         public static final int auto=0x7f0c0021;
         public static final int beginning=0x7f0c0034;
         public static final int bottom=0x7f0c0022;
-        public static final int btnBack=0x7f0c008f;
+        public static final int btnBack=0x7f0c0091;
         public static final int btnSpeak=0x7f0c006f;
         public static final int btnStopMusic=0x7f0c0072;
         public static final int buttonPanel=0x7f0c0047;
@@ -2732,7 +2732,7 @@ containing a value of this type.
         public static final int text2=0x7f0c008a;
         public static final int textSpacerNoButtons=0x7f0c0050;
         public static final int textView2=0x7f0c0090;
-        public static final int textView3=0x7f0c0091;
+        public static final int textView3=0x7f0c008f;
         public static final int text_input_password_toggle=0x7f0c007f;
         public static final int time=0x7f0c0088;
         public static final int title=0x7f0c0046;
