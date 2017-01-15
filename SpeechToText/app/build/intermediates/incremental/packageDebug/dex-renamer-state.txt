@@ -1,7 +1,7 @@
-#Tue Nov 29 22:27:34 EST 2016
-base.0=/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1e9695050e1204119b13f37ed3914fb163de6987
+#Sat Jan 14 22:27:03 EST 2017
+base.0=/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f645458e905057abbf4d26b193a1ee68a96ac6cd
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8f9cd42c967f4f1cbc05a441c2ab0f915bb80739/classes.dex
-base.1=/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_8f9cd42c967f4f1cbc05a441c2ab0f915bb80739
-file.0=/Users/joeluong/HERTZ-Project/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1e9695050e1204119b13f37ed3914fb163de6987/classes.dex
+file.1=/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8d19eb61f27dfadbc322dc843b4da4511bdddf1/classes.dex
+base.1=/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8d19eb61f27dfadbc322dc843b4da4511bdddf1
+file.0=/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f645458e905057abbf4d26b193a1ee68a96ac6cd/classes.dex

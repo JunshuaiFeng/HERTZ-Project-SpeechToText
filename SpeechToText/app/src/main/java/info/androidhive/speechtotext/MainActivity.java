@@ -1,7 +1,13 @@
 package info.androidhive.speechtotext;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.lang.reflect.Type;
+import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -78,6 +84,13 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 	MediaPlayer mp;
 	boolean playingMusic = false;
 
+	static private int port;
+	static private Socket socket;
+	static private BufferedReader in;
+	static private PrintWriter out;
+	static private boolean PiConnected = false;
+
+
 
 	ConversationService service = new ConversationService("2016-09-20");
 	MessageRequest newMessage;
@@ -123,6 +136,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+
+
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
 		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
 		txtResponse = (TextView) findViewById(R.id.txtResponse);
@@ -154,6 +169,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 			}
 		});
 
+		// Left Float Button
 		fab_Left.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -174,17 +190,16 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 			}
 		});
 
+		// Top Float Button
 		fab_Top.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//Toast.makeText(MainActivity.this,"Top Button Clicked",Toast.LENGTH_SHORT).show();
+
 				Intent myIntent = new Intent(MainActivity.this, QuestionList.class);
 				startActivityForResult(myIntent, 0);
 			}
 		});
 
-		// hide the action bar
-		//getActionBar().hide();
 
 
 		t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
@@ -282,6 +297,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 				new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
 			}
 		});
+
+
+
 	}
 
 	/**
@@ -363,7 +381,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 				Handler handler = new Handler();
 				handler.postDelayed(new Runnable() {
 					public void run() {
-						// Actions to do after 1 seconds
+						// Actions to do after 2.5 seconds
 						txtResponse.setText(String.valueOf(textResult));
 						String utteranceId=this.hashCode() + "";
 						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
@@ -374,18 +392,62 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 				handler.postDelayed(new Runnable() {
 					@Override
 					public void run() {
-						if (String.valueOf(textResult).startsWith("Great choice! Playing some")){
+
+						// Play music
+						if (String.valueOf(textResult).startsWith("Playing some")){
 							mp = MediaPlayer.create(MainActivity.this, R.raw.janji_heroes_tonight);
 							mp.start();
 							btnStopMusic.setVisibility(View.VISIBLE);
 							playingMusic = true;
 						}
+
+						// Check weather
 						if(String.valueOf(textResult).startsWith("Finding information about current weather")){
 							new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
 							txtTemp.setVisibility(View.VISIBLE);
 							imageView.setVisibility(View.VISIBLE);
 						}
 
+						// Turn on the light
+						if(String.valueOf(textResult).startsWith("Ok. Turning on the lights")) {
+							if (PiConnected == false) {
+								new Thread(new Runnable() {
+									@Override
+									public void run() {
+										try {
+											//connect("192.168.1.20", 8888);
+
+											socket = new Socket("192.168.1.20", 8888);
+											out = new PrintWriter(socket.getOutputStream(), true);
+											in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+											System.out.println("Connected to Rasberry Pi");
+											PiConnected = true;
+											System.out.println("Turn On");
+											out.println("ON");
+										} catch (Exception ex) {
+											System.out.println("Cannot connect to the RasPi: " + ex.getMessage());
+										}
+									}
+								}).start();
+							}else {
+								System.out.println("Turn On");
+								out.println("ON");
+							}
+						}
+
+						// Turn off the light
+						if(String.valueOf(textResult).startsWith("Ok. Turning off the lights")){
+
+							try{
+
+								System.out.println("Turn Off");
+								out.println("OFF");
+
+							}catch(Exception ex){
+								System.out.println(ex.getMessage());
+							}
+
+						}
 					}
 				}, 5500);
 
@@ -395,6 +457,41 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 		}
 	}
+
+	public void connect(String ipAddress, int port) {
+		// TODO Auto-generated method stub
+		boolean success;
+
+		// Attempt connection with server
+		try {
+			socket = new Socket(ipAddress, port);
+			out = new PrintWriter(socket.getOutputStream(), true);
+			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			success = true;
+		} catch (UnknownHostException ex) {
+			System.out.println("Unknown Host. ");
+			success = false;
+		} catch (IOException ex) {
+			System.out.println("Couldn't get I/O for the connection. ");
+			success = false;
+		}
+
+		// Connection was successful
+		if(success) {
+			// Set connection status
+			//statusLabel.setText("Connected");
+
+			// Disable connect button
+			//connectButton.setEnabled(false);
+
+			// Enable all other buttons
+			//btnDisconnect.setEnabled(true);
+			//btnOn.setEnabled(true);
+			//btnOff.setEnabled(true);
+
+		}
+	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -483,6 +580,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		locationManager.requestLocationUpdates(provider, 400, 1, this);
 	}
 
+	//Float Buttons moves
 	private void Move(){
 		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
 		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
@@ -500,6 +598,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 	}
 
+	//Float Buttons goes back
 	private void Back(){
 		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
 		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
