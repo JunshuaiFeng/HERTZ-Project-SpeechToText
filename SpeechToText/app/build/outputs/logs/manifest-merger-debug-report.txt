@@ -51,10 +51,6 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/src/main/AndroidManifest.xml:14:5-75
 	android:name
 		ADDED from /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/src/main/AndroidManifest.xml:14:22-73
-uses-permission#android.permission.CHANGE_WIFI_STATE
-ADDED from /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/src/main/AndroidManifest.xml:15:5-76
-	android:name
-		ADDED from /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/src/main/AndroidManifest.xml:15:22-73
 uses-sdk
 ADDED from /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/src/main/AndroidManifest.xml:17:5-19:41
 MERGED from [com.ibm.watson.developer_cloud:android-sdk:0.2.0] /Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.2.0/AndroidManifest.xml:7:5-9:41

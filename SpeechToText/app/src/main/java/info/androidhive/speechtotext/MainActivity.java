@@ -6,7 +6,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.lang.reflect.Type;
-import java.net.Socket;
+//import java.net.Socket;
+import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,6 +54,9 @@ import android.widget.Toast;
 import android.speech.tts.TextToSpeech;
 
 
+import com.github.nkzawa.socketio.client.IO;
+import com.github.nkzawa.socketio.client.Socket;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.ibm.watson.developer_cloud.android.library.audio.StreamPlayer;
@@ -72,8 +76,19 @@ import info.androidhive.speechtotext.Helper.Helper;
 import info.androidhive.speechtotext.Model.OpenWeatherMap;
 
 
-public class MainActivity extends AppCompatActivity implements LocationListener {
+public class MainActivity extends AppCompatActivity {
 
+	private Socket mSocket;
+
+	{
+		try {
+			//mSocket = IO.socket("http://hdluong-tone-analyzer2.mybluemix.net");
+			mSocket = IO.socket("http://hdluong-tone-analyzer.mybluemix.net");
+		} catch (URISyntaxException e) {
+			System.out.println("Can't connect to socket IO" + e.getMessage());
+		}
+	}
+	static private boolean IOConnected = false;
 	private TextView txtSpeechInput, txtResponse, txtTemp;
 	ImageView imageView;
 	private ImageButton btnSpeak;
@@ -85,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 	boolean playingMusic = false;
 
 	static private int port;
-	static private Socket socket;
+	static private java.net.Socket socket;
 	static private BufferedReader in;
 	static private PrintWriter out;
 	static private boolean PiConnected = false;
@@ -132,10 +147,16 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
 	@Override
-	protected void onCreate(final Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		try {
+			mSocket.connect();
+			System.out.println("Connecting to socket IO");
+		}catch (Exception ex){
+			System.out.println("Can't connect to socket IO"+ ex.getMessage());
+		}
 
 
 		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
@@ -300,6 +321,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 
 
+
 	}
 
 	/**
@@ -339,7 +361,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 				ArrayList<String> result = data
 						.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 				txtSpeechInput.setText(result.get(0));
-
+				//mSocket.emit("send-message", "Don't do it");
 
 
 				newMessage = new MessageRequest.Builder()
@@ -408,6 +430,30 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 							imageView.setVisibility(View.VISIBLE);
 						}
 
+						// Tone Analyzer
+						if(String.valueOf(textResult).startsWith("We will connect you to our agent")){
+
+
+								mSocket.emit("send-message", txtSpeechInput.getText().toString());
+								System.out.println("Connecting to agent");
+
+							Toast.makeText(MainActivity.this,"Calling Hertz Customer Service",Toast.LENGTH_SHORT).show();
+							Intent callIntent = new Intent(Intent.ACTION_CALL);
+							callIntent.setData(Uri.parse("tel:8006544173"));
+							if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+								// TODO: Consider calling
+								//    ActivityCompat#requestPermissions
+								// here to request the missing permissions, and then overriding
+								//   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+								//                                          int[] grantResults)
+								// to handle the case where the user grants the permission. See the documentation
+								// for ActivityCompat#requestPermissions for more details.
+								return;
+							}
+							startActivity(callIntent);
+
+						}
+
 						// Turn on the light
 						if(String.valueOf(textResult).startsWith("Ok. Turning on the lights")) {
 							if (PiConnected == false) {
@@ -416,8 +462,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 									public void run() {
 										try {
 											//connect("192.168.1.20", 8888);
-
-											socket = new Socket("192.168.1.20", 8888);
+											// ipaddress = String that we get from database
+											socket = new java.net.Socket("172.24.36.201", 8888);
 											out = new PrintWriter(socket.getOutputStream(), true);
 											in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 											System.out.println("Connected to Rasberry Pi");
@@ -464,7 +510,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 		// Attempt connection with server
 		try {
-			socket = new Socket(ipAddress, port);
+			socket = new java.net.Socket(ipAddress, port);
 			out = new PrintWriter(socket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			success = true;
@@ -520,7 +566,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
 	};
 
-
+/*
 	@Override
 	public void onLocationChanged(Location location) {
 		lat = location.getLatitude();
@@ -579,7 +625,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 		}
 		locationManager.requestLocationUpdates(provider, 400, 1, this);
 	}
-
+*/
 	//Float Buttons moves
 	private void Move(){
 		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();

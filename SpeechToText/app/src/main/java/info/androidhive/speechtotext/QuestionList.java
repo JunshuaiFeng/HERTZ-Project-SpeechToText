@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+
 /**
  * Created by joeluong on 11/28/16.
  */
@@ -13,10 +14,12 @@ import android.widget.Button;
 public class QuestionList extends AppCompatActivity {
 
     Button btnBack;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question_list);
+
 
         btnBack = (Button)findViewById(R.id.btnBack);
 

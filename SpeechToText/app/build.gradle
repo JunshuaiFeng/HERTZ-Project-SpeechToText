@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "info.androidhive.speechtotext"
@@ -30,4 +30,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:24.2.1'
+    compile 'com.github.nkzawa:socket.io-client:0.3.0'
 }

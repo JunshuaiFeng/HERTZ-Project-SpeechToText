@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_b215df103e7ec59cf9584d61b92044155e76f71f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/natural-language-classifier/3.5.1/a241e54491089de3f9da4b6d1f3b3ac7e1c73366/natural-language-classifier-3.5.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="a241e54491089de3f9da4b6d1f3b3ac7e1c73366">
         <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/natural-language-classifier-3.5.1_d461eb9e86cf94d58a58a644108007ec28111538/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/language-translation/3.5.1/a47b5510d872caddaab98fdfbe8fb580b78009e1/language-translation-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a47b5510d872caddaab98fdfbe8fb580b78009e1">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/language-translation-3.5.1_e17b6e4ac127089df42c93f7b494df09f780ae8c/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,24 +48,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_5f439e06d8d03d3949450fd774119f5c325ecdcc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_90656f43424737fd26a11a9a5168d07bf41a0569/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
@@ -75,21 +57,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="af5dbdd9a011f56d09d1524bff47e9ee3d16c40a">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f645458e905057abbf4d26b193a1ee68a96ac6cd/classes.dex" />
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_7d35f041ba3b4af99681d0017f0c361f7be0cc32/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_1d7a185d88eff64d02ef360a2b2d221b0e4fc0b9/classes.dex" />
+        revision="24.0.2"
+        sha1="99ce730034c6f5aaed710d1e0e9df95e8714ed5f">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.3.1_b3a1323a3c9f96e9a626f8f349037b59a1042e6e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,39 +84,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_4489a829a771f7402881f6d273c7982d0ee2c1f4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_a6703ddb2a853595c775ebe5f6ff1c6f5b00edb5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d325fb16c1ce985bb2890b552dd635bc92b9ebfe/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/visual-recognition/3.5.1/9f7aaed72757c25e75d4bed74a6ba6dc605ae85f/visual-recognition-3.5.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="9f7aaed72757c25e75d4bed74a6ba6dc605ae85f">
         <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/visual-recognition-3.5.1_69a51927d8cff9d0d28ef172e9897ec42d39b618/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_440497a06521cfca8b190831ccf4e26704f491e0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -147,21 +111,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_8c2989f9152c42baf062172ccda16f299cf8eb4c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
         <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_05b3b172e62f8190db9b43661f6a33db08bfb26f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a175376ff0cf1df6af786c5134dc190725535db6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -192,30 +156,21 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/speech-to-text/3.5.1/62b7a418ede6831ee38bc24caf49bc8a57d173d0/speech-to-text-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="62b7a418ede6831ee38bc24caf49bc8a57d173d0">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/speech-to-text-3.5.1_eb6dc034385b8d3defa283d42f6f8ab251d1f621/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="d5c731fc64c03dfe04d51134955b483551c35849">
         <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_e31ee1f63e63d846e5f6576b66d9f3104b20bd76/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_040f98e8bda967c91f39788264151994e0c5bfcf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/personality-insights/3.5.1/5a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b/personality-insights-3.5.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="05a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/personality-insights-3.5.1_92b77ba1d64b3ca8be637b550b21bdaf323ba51b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -237,21 +192,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_198762a954db3f67cadb8a0572dbe930edda3609/classes.dex" />
+        revision="24.0.2"
+        sha1="8ffb30b445ab5deefb6fc3cacfb9e730d3634e50">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f645458e905057abbf4d26b193a1ee68a96ac6cd/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_524101ebbf4bb8a1d8b29b6b686ec6aff174ac35/classes.dex" />
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a7295fc8fa048c81fce75906c7ddf81b5a7e42d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_e95fb4094b1b1de5ae7926d9019d2daa853b6aeb/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -264,21 +228,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.3.1/ebca9fdfbef870042a19aec6a5b7a21d72639310/okhttp-ws-3.3.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_94da6afcc317d7ccc939a37f7bc6799144d9e457/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_7d35f041ba3b4af99681d0017f0c361f7be0cc32/classes.dex" />
+        revision="24.0.2"
+        sha1="ebca9fdfbef870042a19aec6a5b7a21d72639310">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-ws-3.3.1_958a3d4d37df08c532ef1b54ca4f71179cc87f49/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -291,21 +246,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_8ddc421bc817d8da9e69a5644605b329bd9900ed/classes.dex" />
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_1d7a185d88eff64d02ef360a2b2d221b0e4fc0b9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.1_b280863dc9d41fd0c6adc2325140a421cc834c98/classes.dex" />
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_868d7b4ce07a2b949a0f5ad4f38ebc470532e2d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_90656f43424737fd26a11a9a5168d07bf41a0569/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/personality-insights/3.5.1/5a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b/personality-insights-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="05a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/personality-insights-3.5.1_92b77ba1d64b3ca8be637b550b21bdaf323ba51b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -327,12 +300,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.3.1/3ca9d0d53a27ecb88538ed874be417cfa827db5d/engine.io-client-0.3.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="99ce730034c6f5aaed710d1e0e9df95e8714ed5f">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.3.1_b3a1323a3c9f96e9a626f8f349037b59a1042e6e/classes.dex" />
+        sha1="3ca9d0d53a27ecb88538ed874be417cfa827db5d">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/engine.io-client-0.3.1_23621a68f97fe84b42e578c41b9b18eae9f00c73/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -342,15 +315,6 @@
         revision="24.0.3"
         sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
         <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5852981d8b7916c0178ec88afa8e544a3f1c7977/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_c0ad3b2dc7d208556f87a2522b57a33c93782078/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -372,39 +336,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/org.java-websocket/Java-WebSocket/1.3.0/db2658f013fb163de4a99274c2eb9e17efe535d2/Java-WebSocket-1.3.0.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="7a670e533a6b852092d4ddc03e7302eb1a85e24e">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_18acb7aa4a961287274551cab5fc72ae504f85c7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/libs/java-sdk-3.4.0-jar-with-dependencies.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="27fa2a17121b6fe835a240cbad406d4956c4cda2">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/2/java-sdk-3.4.0-jar-with-dependencies_edc7a8df321375903ef67cc0bdc2c57b4e102520/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_68781d5a88f0a4f06fcf062fea55cbdfae7ff978/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/document-conversion/3.5.1/fb60a85c79d28ddcfcd96c0446e770e036f06ac4/document-conversion-3.5.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fb60a85c79d28ddcfcd96c0446e770e036f06ac4">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/document-conversion-3.5.1_239d8b43eae66688c806f1c6de57f684112341db/classes.dex" />
+        sha1="db2658f013fb163de4a99274c2eb9e17efe535d2">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/Java-WebSocket-1.3.0_2ab253c504bab54665fdefbe8170e5a3c873b858/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -426,57 +363,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a7295fc8fa048c81fce75906c7ddf81b5a7e42d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_a04304fc5a351465eba9d235253b45776e3aa6ad/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="766b20484c2293c16ee56ee3a322f52c876a58ba">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8d19eb61f27dfadbc322dc843b4da4511bdddf1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
         <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5d95674a8a424c9d6f30ab7ff22ddbd35fc9bf1b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_55d344ec02705fd5fb3b20e8dc827c1bd0519001/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/dialog/3.5.1/90a38f5ac510aa27db5c120abf3cc70755386702/dialog-3.5.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="90a38f5ac510aa27db5c120abf3cc70755386702">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/dialog-3.5.1_46dc001643b882ef3d87a71b5bf425f6dd9307c5/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -489,12 +381,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/core/3.5.1/31ed2f734d523e5a3606edb6568cd0c3d71d3600/core-3.5.1.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="31ed2f734d523e5a3606edb6568cd0c3d71d3600">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.5.1_6252bb1cf6374bc366d50565f3663810394b1082/classes.dex" />
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_41901edd1e37e55fae138ca54cb7c8409698a5fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/retrieve-and-rank/3.5.1/18ea86bde120910adc7c62df5277ce792d3c60df/retrieve-and-rank-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="18ea86bde120910adc7c62df5277ce792d3c60df">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrieve-and-rank-3.5.1_dce681e019627d1678d0630e172b93e473135f4a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -525,12 +426,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9610995ab4d1890ff3c1cd6e8b6680efde0317fe/classes.dex" />
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_ad5ff1a505d0ef98d5f13adc80275b01ef05b7b3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -543,12 +444,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.2.2/5012450aee579c3118ff09461d5ce210e0cdc2a9/jna-4.2.2.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_eb4e82e7a8f601834cf023a0216c967c5378f2ca/classes.dex" />
+        revision="24.0.2"
+        sha1="5012450aee579c3118ff09461d5ce210e0cdc2a9">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/jna-4.2.2_5e8a246b0ac5a6b388ad9ce8db0df78e08673848/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_dcb968c588f33d95223c9f9c43c0c615fc80edb6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -561,12 +471,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_6cdbd76691da3b4fac933d0b56351ec1afe00d50/classes.dex" />
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_8943cee6675a514054f2cadc52eb1319eefba67e/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -579,12 +489,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_ca16196236b7c39850ecafa1248211a50528aa85/classes.dex" />
+        revision="24.0.2"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.1_b280863dc9d41fd0c6adc2325140a421cc834c98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/language-translator/3.5.1/55ad3247491d28e08e1eef014d09a87b51940865/language-translator-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="55ad3247491d28e08e1eef014d09a87b51940865">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/language-translator-3.5.1_5964d09c97d6a5224361af8d05aa6787ef48ab30/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -624,15 +543,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/alchemy/3.5.1/5368a2345b92e5e374c727c93557df95ca7eacd0/alchemy-3.5.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5368a2345b92e5e374c727c93557df95ca7eacd0">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/alchemy-3.5.1_58328592b92fe284061cd398472304ba03c8c06f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/retrieve-and-rank/3.5.1/18ea86bde120910adc7c62df5277ce792d3c60df/retrieve-and-rank-3.5.1.jar"
         jumboMode="true"
         optimize="true"
@@ -648,6 +558,564 @@
         revision="24.0.3"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
         <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_ad5ff1a505d0ef98d5f13adc80275b01ef05b7b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_41901edd1e37e55fae138ca54cb7c8409698a5fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9d5b864348c8f44ffaecb3904e983de92ad14e90/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a175376ff0cf1df6af786c5134dc190725535db6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_86ffb88d4684dc6c7ff1ef8cddbb56f16c55a98a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="73cffbb6af0ac972a6290c7260d6d528831842bd">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ibm.watson.developer_cloud-android-sdk-0.1.0_76f789ecd6217223bcdb803886e50f2cefd0382d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_ca16196236b7c39850ecafa1248211a50528aa85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_b215df103e7ec59cf9584d61b92044155e76f71f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/tradeoff-analytics/3.5.1/601c30914f2e23381d09d243c940fa9a4c0cb104/tradeoff-analytics-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="601c30914f2e23381d09d243c940fa9a4c0cb104">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/tradeoff-analytics-3.5.1_77ddb9c0e2bbb9fba546e200b2737acd64743a5d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_5f439e06d8d03d3949450fd774119f5c325ecdcc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_90656f43424737fd26a11a9a5168d07bf41a0569/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="af5dbdd9a011f56d09d1524bff47e9ee3d16c40a">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_f645458e905057abbf4d26b193a1ee68a96ac6cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_1d7a185d88eff64d02ef360a2b2d221b0e4fc0b9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/engine.io-client/0.3.1/3ca9d0d53a27ecb88538ed874be417cfa827db5d/engine.io-client-0.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3ca9d0d53a27ecb88538ed874be417cfa827db5d">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/engine.io-client-0.3.1_23621a68f97fe84b42e578c41b9b18eae9f00c73/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.3.1/14e70f2069fb98dc60346dd24cb7b6a2e321580d/okhttp-urlconnection-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="14e70f2069fb98dc60346dd24cb7b6a2e321580d">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-urlconnection-3.3.1_671fe26a371425c3d81d396e0815f29c7f952b21/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_4489a829a771f7402881f6d273c7982d0ee2c1f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_a6703ddb2a853595c775ebe5f6ff1c6f5b00edb5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/org.java-websocket/Java-WebSocket/1.3.0/db2658f013fb163de4a99274c2eb9e17efe535d2/Java-WebSocket-1.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="db2658f013fb163de4a99274c2eb9e17efe535d2">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/Java-WebSocket-1.3.0_2ab253c504bab54665fdefbe8170e5a3c873b858/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_d325fb16c1ce985bb2890b552dd635bc92b9ebfe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="753f5213cda77fa3dc78ff8533688a6d39cc44b4">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8d19eb61f27dfadbc322dc843b4da4511bdddf1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a175376ff0cf1df6af786c5134dc190725535db6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-jsr166e/2.22.2/3ef9c67a5bea4d914a45bd54f3405fa29a368f7a/jersey-jsr166e-2.22.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3ef9c67a5bea4d914a45bd54f3405fa29a368f7a">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/jersey-jsr166e-2.22.2_83257ecfe961c4f037bf06da2a2ae2eeed7ee74d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_040f98e8bda967c91f39788264151994e0c5bfcf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/personality-insights/3.5.1/5a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b/personality-insights-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="05a0e5d9d8f21c008bb664fdcf5b5d66e2f9908b">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/personality-insights-3.5.1_92b77ba1d64b3ca8be637b550b21bdaf323ba51b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_198762a954db3f67cadb8a0572dbe930edda3609/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/conversation/3.5.1/81f215d3f03abbb69e1f14ff41bdaef806a25a4c/conversation-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="81f215d3f03abbb69e1f14ff41bdaef806a25a4c">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/conversation-3.5.1_dffe18ae55a3be786a224499e8eaf38f2487e300/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/document-conversion/3.5.1/fb60a85c79d28ddcfcd96c0446e770e036f06ac4/document-conversion-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fb60a85c79d28ddcfcd96c0446e770e036f06ac4">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/document-conversion-3.5.1_239d8b43eae66688c806f1c6de57f684112341db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_524101ebbf4bb8a1d8b29b6b686ec6aff174ac35/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/tone-analyzer/3.5.1/c195d6f9f616f4bf491085c8ea24a64cf121edcc/tone-analyzer-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c195d6f9f616f4bf491085c8ea24a64cf121edcc">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/tone-analyzer-3.5.1_58dc3c5311ef9f346cb5cdf3125f2a20b49d9f11/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_94da6afcc317d7ccc939a37f7bc6799144d9e457/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_7d35f041ba3b4af99681d0017f0c361f7be0cc32/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/core/3.5.1/31ed2f734d523e5a3606edb6568cd0c3d71d3600/core-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="31ed2f734d523e5a3606edb6568cd0c3d71d3600">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.5.1_6252bb1cf6374bc366d50565f3663810394b1082/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_8ddc421bc817d8da9e69a5644605b329bd9900ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.1/19047bdb6a4fc00a44124f64ca98e88fc204e7e3/okhttp-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="19047bdb6a4fc00a44124f64ca98e88fc204e7e3">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.1_b280863dc9d41fd0c6adc2325140a421cc834c98/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.3.1/99ce730034c6f5aaed710d1e0e9df95e8714ed5f/logging-interceptor-3.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="99ce730034c6f5aaed710d1e0e9df95e8714ed5f">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.3.1_b3a1323a3c9f96e9a626f8f349037b59a1042e6e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/natural-language-classifier/3.5.1/a241e54491089de3f9da4b6d1f3b3ac7e1c73366/natural-language-classifier-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a241e54491089de3f9da4b6d1f3b3ac7e1c73366">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/natural-language-classifier-3.5.1_d461eb9e86cf94d58a58a644108007ec28111538/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_c0ad3b2dc7d208556f87a2522b57a33c93782078/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="26495715f97373a3cea08ccd2df4ee607e5061c5">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ibm.watson.developer_cloud-android-sdk-0.2.0_c184252c41df7ed3a984ce845b0ac40d76694e66/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7a670e533a6b852092d4ddc03e7302eb1a85e24e">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_18acb7aa4a961287274551cab5fc72ae504f85c7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/libs/java-sdk-3.4.0-jar-with-dependencies.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="27fa2a17121b6fe835a240cbad406d4956c4cda2">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/2/java-sdk-3.4.0-jar-with-dependencies_edc7a8df321375903ef67cc0bdc2c57b4e102520/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/visual-recognition/3.5.1/9f7aaed72757c25e75d4bed74a6ba6dc605ae85f/visual-recognition-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9f7aaed72757c25e75d4bed74a6ba6dc605ae85f">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/visual-recognition-3.5.1_69a51927d8cff9d0d28ef172e9897ec42d39b618/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_68781d5a88f0a4f06fcf062fea55cbdfae7ff978/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/document-conversion/3.5.1/fb60a85c79d28ddcfcd96c0446e770e036f06ac4/document-conversion-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fb60a85c79d28ddcfcd96c0446e770e036f06ac4">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/document-conversion-3.5.1_239d8b43eae66688c806f1c6de57f684112341db/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.3.0/8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9/socket.io-client-0.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/socket.io-client-0.3.0_94b925189f6a3cc2882fa17d36b4d6e21d9a6a3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a7295fc8fa048c81fce75906c7ddf81b5a7e42d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_fb4a85c07ae2764d33e6da8b73707fbd47f66915/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_a04304fc5a351465eba9d235253b45776e3aa6ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="766b20484c2293c16ee56ee3a322f52c876a58ba">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b8d19eb61f27dfadbc322dc843b4da4511bdddf1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_6cdbd76691da3b4fac933d0b56351ec1afe00d50/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_55d344ec02705fd5fb3b20e8dc827c1bd0519001/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/dialog/3.5.1/90a38f5ac510aa27db5c120abf3cc70755386702/dialog-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="90a38f5ac510aa27db5c120abf3cc70755386702">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/dialog-3.5.1_46dc001643b882ef3d87a71b5bf425f6dd9307c5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/alchemy/3.5.1/5368a2345b92e5e374c727c93557df95ca7eacd0/alchemy-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5368a2345b92e5e374c727c93557df95ca7eacd0">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/alchemy-3.5.1_58328592b92fe284061cd398472304ba03c8c06f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3fa09bed5fd50c4a95529767beb19515347032a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/core/3.5.1/31ed2f734d523e5a3606edb6568cd0c3d71d3600/core-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="31ed2f734d523e5a3606edb6568cd0c3d71d3600">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/core-3.5.1_6252bb1cf6374bc366d50565f3663810394b1082/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_da9b6b03f1441126b8ba1036937033c81a1405d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9610995ab4d1890ff3c1cd6e8b6680efde0317fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/text-to-speech/3.5.1/1ce2a90cae7abfbf29f2f9a7e5f51eedb8900a95/text-to-speech-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1ce2a90cae7abfbf29f2f9a7e5f51eedb8900a95">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/text-to-speech-3.5.1_8d50ec5b31e29720313e8a726229102080f197e1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/root/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/joeluong/root/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_eb4e82e7a8f601834cf023a0216c967c5378f2ca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_6cdbd76691da3b4fac933d0b56351ec1afe00d50/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_ca16196236b7c39850ecafa1248211a50528aa85/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.github.nkzawa/socket.io-client/0.3.0/8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9/socket.io-client-0.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8dfd7cf8d1124acb027b3ffd53eafcc518af3ba9">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/socket.io-client-0.3.0_94b925189f6a3cc2882fa17d36b4d6e21d9a6a3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_21f669ed4b359e697d30cf335f52a8e887acb982/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/alchemy/3.5.1/5368a2345b92e5e374c727c93557df95ca7eacd0/alchemy-3.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5368a2345b92e5e374c727c93557df95ca7eacd0">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/alchemy-3.5.1_58328592b92fe284061cd398472304ba03c8c06f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -678,21 +1146,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/.gradle/caches/modules-2/files-2.1/com.ibm.watson.developer_cloud/dialog/3.5.1/90a38f5ac510aa27db5c120abf3cc70755386702/dialog-3.5.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_41901edd1e37e55fae138ca54cb7c8409698a5fc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_9d5b864348c8f44ffaecb3904e983de92ad14e90/classes.dex" />
+        revision="24.0.2"
+        sha1="90a38f5ac510aa27db5c120abf3cc70755386702">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/dialog-3.5.1_46dc001643b882ef3d87a71b5bf425f6dd9307c5/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -705,12 +1164,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jar="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_86ffb88d4684dc6c7ff1ef8cddbb56f16c55a98a/classes.dex" />
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_94da6afcc317d7ccc939a37f7bc6799144d9e457/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -720,15 +1179,6 @@
         revision="24.0.3"
         sha1="62b7a418ede6831ee38bc24caf49bc8a57d173d0">
         <dex dex="/Users/joeluong/HERTZ-Project-SpeechToText/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/speech-to-text-3.5.1_eb6dc034385b8d3defa283d42f6f8ab251d1f621/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/exploded-aar/com.ibm.watson.developer_cloud/android-sdk/0.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="73cffbb6af0ac972a6290c7260d6d528831842bd">
-        <dex dex="/Users/joeluong/Desktop/AndroidWorkspace/SpeechToText/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.ibm.watson.developer_cloud-android-sdk-0.1.0_76f789ecd6217223bcdb803886e50f2cefd0382d/classes.dex" />
     </item>
 
 </items>
