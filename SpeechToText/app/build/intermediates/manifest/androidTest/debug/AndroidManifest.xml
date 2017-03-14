@@ -3,11 +3,11 @@
     package="info.androidhive.speechtotext.test" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="15"
         android:targetSdkVersion="24" />
 
     <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
+        android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
         android:label="Tests for info.androidhive.speechtotext"

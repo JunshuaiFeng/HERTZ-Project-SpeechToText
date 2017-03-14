@@ -78,636 +78,687 @@ import info.androidhive.speechtotext.Model.OpenWeatherMap;
 
 public class MainActivity extends AppCompatActivity {
 
-	private Socket mSocket;
+    private Socket mSocket;
 
-	{
-		try {
-			//mSocket = IO.socket("http://hdluong-tone-analyzer2.mybluemix.net");
-			mSocket = IO.socket("http://hdluong-tone-analyzer.mybluemix.net");
-		} catch (URISyntaxException e) {
-			System.out.println("Can't connect to socket IO" + e.getMessage());
-		}
-	}
-	static private boolean IOConnected = false;
-	private TextView txtSpeechInput, txtResponse, txtTemp;
-	ImageView imageView;
-	private ImageButton btnSpeak;
-	private EditText edtInput;
-	private Button edtButton;
-	private ImageButton btnStopMusic;
-	private final int REQ_CODE_SPEECH_INPUT = 100;
-	MediaPlayer mp;
-	boolean playingMusic = false;
+    {
+        try {
+            //mSocket = IO.socket("http://hdluong-tone-analyzer2.mybluemix.net");
+            mSocket = IO.socket("http://hdluong-tone-analyzer.mybluemix.net");
+        } catch (URISyntaxException e) {
+            System.out.println("Can't connect to socket IO" + e.getMessage());
+        }
+    }
 
-	static private int port;
-	static private java.net.Socket socket;
-	static private BufferedReader in;
-	static private PrintWriter out;
-	static private boolean PiConnected = false;
+    static private boolean IOConnected = false;
+    private TextView txtSpeechInput, txtResponse, txtTemp;
+    ImageView imageView;
+    private ImageButton btnSpeak;
+    private EditText edtInput;
+    private Button edtButton;
+    private ImageButton btnStopMusic;
+    private final int REQ_CODE_SPEECH_INPUT = 100;
+    MediaPlayer mp;
+    boolean playingMusic = false;
 
-
-
-	ConversationService service = new ConversationService("2016-09-20");
-	MessageRequest newMessage;
-	MessageResponse response;
-	StreamPlayer streamPlayer;
-	private StreamPlayer player = new StreamPlayer();
-	private TextToSpeech textService;
-	TextToSpeech t1;
-
-	static String textResult;
-	String context;
-	static String RESPONSE;
-
-	//Weather
-	LocationManager locationManager;
-	String provider;
-	static double lat, lng;
-	OpenWeatherMap openWeatherMap = new OpenWeatherMap();
-
-	int MY_PERMISSION = 0;
-
-	//Floating Buttons
-	FloatingActionButton fab, fab_Left, fab_Top;
-	Animation Move_Left, Move_Top, Back_Left, Back_Top;
-	boolean moveBack = false;
-
-	@SuppressWarnings("deprecation")
-	private void ttsUnder20(String text) {
-		HashMap<String, String> map = new HashMap<>();
-		map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
-		t1.speak(text, TextToSpeech.QUEUE_FLUSH, map);
-	}
-
-	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-	private void ttsGreater21(String text) {
-		String utteranceId = this.hashCode() + "";
-		t1.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
-	}
+    static private int port;
+    static private java.net.Socket socket;
+    static private BufferedReader in;
+    static private PrintWriter out;
+    static private boolean PiConnected = false;
 
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+    ConversationService service = new ConversationService("2016-09-20");
+    MessageRequest newMessage;
+    MessageResponse response;
+    StreamPlayer streamPlayer;
+    private StreamPlayer player = new StreamPlayer();
+    private TextToSpeech textService;
+    TextToSpeech t1;
 
-		try {
+    static String textResult;
+    String context;
+    static String RESPONSE;
+
+    //Weather
+    LocationManager locationManager;
+    String provider;
+    static double lat, lng;
+    OpenWeatherMap openWeatherMap = new OpenWeatherMap();
+
+    int MY_PERMISSION = 0;
+
+    //Floating Buttons
+    FloatingActionButton fab, fab_Left, fab_Top;
+    Animation Move_Left, Move_Top, Back_Left, Back_Top;
+    boolean moveBack = false;
+
+    @SuppressWarnings("deprecation")
+    private void ttsUnder20(String text) {
+        HashMap<String, String> map = new HashMap<>();
+        map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
+        t1.speak(text, TextToSpeech.QUEUE_FLUSH, map);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private void ttsGreater21(String text) {
+        String utteranceId = this.hashCode() + "";
+        t1.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ConnectToSocketIO();
+        /*try {
 			mSocket.connect();
 			System.out.println("Connecting to socket IO");
 		}catch (Exception ex){
 			System.out.println("Can't connect to socket IO"+ ex.getMessage());
-		}
+		}*/
 
 
-		txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
-		btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
-		txtResponse = (TextView) findViewById(R.id.txtResponse);
-		edtInput = (EditText) findViewById(R.id.edtInput);
-		edtButton = (Button) findViewById(R.id.edtButton);
-		btnStopMusic = (ImageButton) findViewById(R.id.btnStopMusic);
-		txtTemp = (TextView) findViewById(R.id.txtTemp);
-		imageView = (ImageView) findViewById(R.id.imageView);
-		fab = (FloatingActionButton) findViewById(R.id.fab);
-		fab_Left = (FloatingActionButton) findViewById(R.id.fab_Left);
-		fab_Top = (FloatingActionButton) findViewById(R.id.fab_Top);
+        txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
+        btnSpeak = (ImageButton) findViewById(R.id.btnSpeak);
+        txtResponse = (TextView) findViewById(R.id.txtResponse);
+        edtInput = (EditText) findViewById(R.id.edtInput);
+        edtButton = (Button) findViewById(R.id.edtButton);
+        btnStopMusic = (ImageButton) findViewById(R.id.btnStopMusic);
+        txtTemp = (TextView) findViewById(R.id.txtTemp);
+        imageView = (ImageView) findViewById(R.id.imageView);
+        /*fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab_Left = (FloatingActionButton) findViewById(R.id.fab_Left);
+        fab_Top = (FloatingActionButton) findViewById(R.id.fab_Top);
 
-		Move_Left = AnimationUtils.loadAnimation(this, R.anim.move_left);
-		Move_Top = AnimationUtils.loadAnimation(this, R.anim.move_top);
+        Move_Left = AnimationUtils.loadAnimation(this, R.anim.move_left);
+        Move_Top = AnimationUtils.loadAnimation(this, R.anim.move_top);
 
-		Back_Left = AnimationUtils.loadAnimation(this, R.anim.back_left);
-		Back_Top = AnimationUtils.loadAnimation(this, R.anim.back_top);
+        Back_Left = AnimationUtils.loadAnimation(this, R.anim.back_left);
+        Back_Top = AnimationUtils.loadAnimation(this, R.anim.back_top);
 
-		fab.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if (moveBack == false) {
-					Move();
-					moveBack = true;
-				} else {
-					Back();
-					moveBack = false;
-				}
-			}
-		});
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (moveBack == false) {
+                    Move();
+                    moveBack = true;
+                } else {
+                    Back();
+                    moveBack = false;
+                }
+            }
+        });
 
-		// Left Float Button
-		fab_Left.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Toast.makeText(MainActivity.this,"Calling Hertz Customer Service",Toast.LENGTH_SHORT).show();
-				Intent callIntent = new Intent(Intent.ACTION_CALL);
-				callIntent.setData(Uri.parse("tel:8006544173"));
-				if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-					// TODO: Consider calling
-					//    ActivityCompat#requestPermissions
-					// here to request the missing permissions, and then overriding
-					//   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-					//                                          int[] grantResults)
-					// to handle the case where the user grants the permission. See the documentation
-					// for ActivityCompat#requestPermissions for more details.
-					return;
-				}
-				startActivity(callIntent);
-			}
-		});
+        // Left Float Button
+        fab_Left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Calling Hertz Customer Service", Toast.LENGTH_SHORT).show();
+                Intent callIntent = new Intent(Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:8006544173"));
+                if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    // TODO: Consider calling
+                    //    ActivityCompat#requestPermissions
+                    // here to request the missing permissions, and then overriding
+                    //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                    //                                          int[] grantResults)
+                    // to handle the case where the user grants the permission. See the documentation
+                    // for ActivityCompat#requestPermissions for more details.
+                    return;
+                }
+                startActivity(callIntent);
+            }
+        });
 
-		// Top Float Button
-		fab_Top.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
+        // Top Float Button
+        fab_Top.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-				Intent myIntent = new Intent(MainActivity.this, QuestionList.class);
-				startActivityForResult(myIntent, 0);
-			}
-		});
-
-
-
-		t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-			@Override
-			public void onInit(int status) {if (status == TextToSpeech.SUCCESS) {
-				int result = t1.setLanguage(Locale.US);
-				if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-
-				}
-
-			} else {
-
-			}
-			}
-		});
-
-		//Get Coordinates
-		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-		provider = locationManager.getBestProvider(new Criteria(), false);
-
-		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                Intent myIntent = new Intent(MainActivity.this, QuestionList.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });*/
 
 
-			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
-					Manifest.permission.INTERNET,
-					Manifest.permission.ACCESS_COARSE_LOCATION,
-					Manifest.permission.ACCESS_FINE_LOCATION,
-					Manifest.permission.ACCESS_NETWORK_STATE,
-					Manifest.permission.SYSTEM_ALERT_WINDOW,
-					Manifest.permission.WRITE_EXTERNAL_STORAGE
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    int result = t1.setLanguage(Locale.US);
+                    if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+
+                    }
+
+                } else {
+
+                }
+            }
+        });
+
+        //Get Coordinates
+        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        provider = locationManager.getBestProvider(new Criteria(), false);
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
 
-			}, MY_PERMISSION);
-		}
-		Location location = locationManager.getLastKnownLocation(provider);
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+                    Manifest.permission.INTERNET,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_NETWORK_STATE,
+                    Manifest.permission.SYSTEM_ALERT_WINDOW,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
 
-		Criteria locationCritera = new Criteria();
-		locationCritera.setAccuracy(Criteria.ACCURACY_COARSE);
-		locationCritera.setAltitudeRequired(false);
-		locationCritera.setBearingRequired(false);
-		locationCritera.setCostAllowed(true);
-		locationCritera.setPowerRequirement(Criteria.NO_REQUIREMENT);
 
-		String providerName = locationManager.getBestProvider(locationCritera, true);
+            }, MY_PERMISSION);
+        }
+        Location location = locationManager.getLastKnownLocation(provider);
+
+        Criteria locationCritera = new Criteria();
+        /*locationCritera.setAccuracy(Criteria.ACCURACY_COARSE);
+        locationCritera.setAltitudeRequired(false);
+        locationCritera.setBearingRequired(false);
+        locationCritera.setCostAllowed(true);
+        locationCritera.setPowerRequirement(Criteria.NO_REQUIREMENT);*/
+
+        String providerName = locationManager.getBestProvider(locationCritera, true);
 
 		/*if (location == null)
 			Log.e("TAG","No Location");
 		*/
 
-		if (providerName != null && locationManager.isProviderEnabled(providerName)) {
-			// Provider is enabled
-			locationManager.requestLocationUpdates(providerName, 20000, 100, this.locationListener);
-			//lat = location.getLatitude();
-			//lng = location.getLongitude();
-		} else {
-			// Provider not enabled, prompt user to enable it
-			Toast.makeText(this, "Turn on the GPS", Toast.LENGTH_LONG).show();
-			Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-			this.startActivity(myIntent);
-		}
+        if (providerName != null && locationManager.isProviderEnabled(providerName)) {
+            // Provider is enabled
+            locationManager.requestLocationUpdates(providerName, 20000, 100, this.locationListener);
+            //lat = location.getLatitude();
+            //lng = location.getLongitude();
+        } else {
+            // Provider not enabled, prompt user to enable it
+            Toast.makeText(this, "Turn on the GPS", Toast.LENGTH_LONG).show();
+            Intent myIntent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+            this.startActivity(myIntent);
+        }
 
 
-		btnSpeak.setOnClickListener(new View.OnClickListener() {
+        btnSpeak.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				btnStopMusic.setVisibility(View.INVISIBLE);
-				txtTemp.setVisibility(View.INVISIBLE);
-				imageView.setVisibility(View.INVISIBLE);
-				promptSpeechInput();
+            @Override
+            public void onClick(View v) {
+                btnStopMusic.setVisibility(View.INVISIBLE);
+                txtTemp.setVisibility(View.INVISIBLE);
+                imageView.setVisibility(View.INVISIBLE);
+                promptSpeechInput();
 
-			}
-		});
+            }
+        });
 
-		btnStopMusic.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if(playingMusic == true){
-					//mp.seekTo(0);
-					mp.pause();
-					btnStopMusic.setBackgroundResource(R.drawable.play96);
-					playingMusic = false;
-				}else {
-					mp.start();
-					btnStopMusic.setBackgroundResource(R.drawable.pause96);
-					playingMusic = true;
-				}
-			}
-		});
+        btnStopMusic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (playingMusic == true) {
+                    //mp.seekTo(0);
+                    mp.pause();
+                    btnStopMusic.setBackgroundResource(R.drawable.play96);
+                    playingMusic = false;
+                } else {
+                    mp.start();
+                    btnStopMusic.setBackgroundResource(R.drawable.pause96);
+                    playingMusic = true;
+                }
+            }
+        });
 
-		edtButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
+        edtButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-				new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
-			}
-		});
-
-
+                new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
+            }
+        });
 
 
-	}
+    }
 
-	/**
-	 * Showing google speech input dialog
-	 * */
-	private void promptSpeechInput() {
-		Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
-				RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-		intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-		intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
-				getString(R.string.speech_prompt));
-		try {
-			startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+    protected boolean ConnectToSocketIO() {
+        try {
+            mSocket.connect();
+            //System.out.println("Connecting to socket IO");
+            return true;
+        } catch (Exception ex) {
+            System.out.println("Can't connect to socket IO" + ex.getMessage());
+            return false;
+        }
+    }
 
-		} catch (ActivityNotFoundException a) {
-			Toast.makeText(getApplicationContext(),
-					getString(R.string.speech_not_supported),
-					Toast.LENGTH_SHORT).show();
-		}
-	}
+    /**
+     * Showing google speech input dialog
+     */
+    protected boolean promptSpeechInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                getString(R.string.speech_prompt));
+        try {
+            startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
 
-
-
-	/**
-	 * Receiving speech input
-	 * */
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		String workspaceId = "a12e9223-d15b-4bb9-a774-47720827580d";
-		service.setUsernameAndPassword("90099f72-f54c-4a4f-a344-b92becd9805e", "J2Z0AURpOe3s");
-		switch (requestCode) {
-		case REQ_CODE_SPEECH_INPUT: {
-			if (resultCode == RESULT_OK && null != data) {
-
-				ArrayList<String> result = data
-						.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-				txtSpeechInput.setText(result.get(0));
-				//mSocket.emit("send-message", "Don't do it");
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(getApplicationContext(),
+                    getString(R.string.speech_not_supported),
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 
 
-				newMessage = new MessageRequest.Builder()
-						.inputText(result.get(0))
-						// Replace with the context obtained from the initial request
-						//.context(...)
-						.build();
-				//response = service.message(workspaceId, newMessage).execute();
+    /**
+     * Receiving speech input
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        String workspaceId = "a12e9223-d15b-4bb9-a774-47720827580d";
+        service.setUsernameAndPassword("90099f72-f54c-4a4f-a344-b92becd9805e", "J2Z0AURpOe3s");
+        switch (requestCode) {
+            case REQ_CODE_SPEECH_INPUT: {
+                if (resultCode == RESULT_OK && null != data) {
 
-				service.message(workspaceId, newMessage).enqueue(new ServiceCallback<MessageResponse>() {
-					@Override
-					public void onResponse(MessageResponse response) {
-						System.out.println(response);
-						String string =  response.toString();
-						try {
-							JSONObject root = new JSONObject(string);
-							JSONObject output = new JSONObject(root.getString("output"));
-							JSONArray text = new JSONArray(output.getString("text"));
-
-							for(int i = 0; i< text.length(); i++) {
-								textResult = text.getString(i);
-								System.out.println("THE TEXT IS: " + textResult);
-							}
-
-						}catch(Exception ex){
-
-							}
-						}
+                    ArrayList<String> result = data
+                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    txtSpeechInput.setText(result.get(0));
+                    //mSocket.emit("send-message", "Don't do it");
 
 
+                    newMessage = new MessageRequest.Builder()
+                            .inputText(result.get(0))
+                            // Replace with the context obtained from the initial request
+                            //.context(...)
+                            .build();
+                    //response = service.message(workspaceId, newMessage).execute();
 
-					@Override
-					public void onFailure(Exception e) {
+                    service.message(workspaceId, newMessage).enqueue(new ServiceCallback<MessageResponse>() {
+                        @Override
+                        public void onResponse(MessageResponse response) {
+                            System.out.println(response);
+                            String string = response.toString();
+                            try {
+                                JSONObject root = new JSONObject(string);
+                                JSONObject output = new JSONObject(root.getString("output"));
+                                JSONArray text = new JSONArray(output.getString("text"));
 
-					}
+                                for (int i = 0; i < text.length(); i++) {
+                                    textResult = text.getString(i);
+                                    System.out.println("THE TEXT IS: " + textResult);
+                                }
 
+                            } catch (Exception ex) {
 
-			});
-				Handler handler = new Handler();
-				handler.postDelayed(new Runnable() {
-					public void run() {
-						// Actions to do after 2.5 seconds
-						txtResponse.setText(String.valueOf(textResult));
-						String utteranceId=this.hashCode() + "";
-						t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
-
-					}
-				}, 2500);
-
-				handler.postDelayed(new Runnable() {
-					@Override
-					public void run() {
-
-						// Play music
-						if (String.valueOf(textResult).startsWith("Playing some")){
-							mp = MediaPlayer.create(MainActivity.this, R.raw.janji_heroes_tonight);
-							mp.start();
-							btnStopMusic.setVisibility(View.VISIBLE);
-							playingMusic = true;
-						}
-
-						// Check weather
-						if(String.valueOf(textResult).startsWith("Finding information about current weather")){
-							new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
-							txtTemp.setVisibility(View.VISIBLE);
-							imageView.setVisibility(View.VISIBLE);
-						}
-
-						// Tone Analyzer
-						if(String.valueOf(textResult).startsWith("We will connect you to our agent")){
+                            }
+                        }
 
 
-								mSocket.emit("send-message", txtSpeechInput.getText().toString());
-								System.out.println("Connecting to agent");
+                        @Override
+                        public void onFailure(Exception e) {
 
-							Toast.makeText(MainActivity.this,"Calling Hertz Customer Service",Toast.LENGTH_SHORT).show();
-							Intent callIntent = new Intent(Intent.ACTION_CALL);
-							callIntent.setData(Uri.parse("tel:8006544173"));
-							if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-								// TODO: Consider calling
-								//    ActivityCompat#requestPermissions
-								// here to request the missing permissions, and then overriding
-								//   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-								//                                          int[] grantResults)
-								// to handle the case where the user grants the permission. See the documentation
-								// for ActivityCompat#requestPermissions for more details.
-								return;
-							}
-							startActivity(callIntent);
-
-						}
-
-						// Turn on the light
-						if(String.valueOf(textResult).startsWith("Ok. Turning on the lights")) {
-							if (PiConnected == false) {
-								new Thread(new Runnable() {
-									@Override
-									public void run() {
-										try {
-											//connect("192.168.1.20", 8888);
-											// ipaddress = String that we get from database
-											socket = new java.net.Socket("172.24.36.201", 8888);
-											out = new PrintWriter(socket.getOutputStream(), true);
-											in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-											System.out.println("Connected to Rasberry Pi");
-											PiConnected = true;
-											System.out.println("Turn On");
-											out.println("ON");
-										} catch (Exception ex) {
-											System.out.println("Cannot connect to the RasPi: " + ex.getMessage());
-										}
-									}
-								}).start();
-							}else {
-								System.out.println("Turn On");
-								out.println("ON");
-							}
-						}
-
-						// Turn off the light
-						if(String.valueOf(textResult).startsWith("Ok. Turning off the lights")){
-
-							try{
-
-								System.out.println("Turn Off");
-								out.println("OFF");
-
-							}catch(Exception ex){
-								System.out.println(ex.getMessage());
-							}
-
-						}
-					}
-				}, 5500);
-
-			}
-			break;
-		}
-
-		}
-	}
-
-	public void connect(String ipAddress, int port) {
-		// TODO Auto-generated method stub
-		boolean success;
-
-		// Attempt connection with server
-		try {
-			socket = new java.net.Socket(ipAddress, port);
-			out = new PrintWriter(socket.getOutputStream(), true);
-			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			success = true;
-		} catch (UnknownHostException ex) {
-			System.out.println("Unknown Host. ");
-			success = false;
-		} catch (IOException ex) {
-			System.out.println("Couldn't get I/O for the connection. ");
-			success = false;
-		}
-
-		// Connection was successful
-		if(success) {
-			// Set connection status
-			//statusLabel.setText("Connected");
-
-			// Disable connect button
-			//connectButton.setEnabled(false);
-
-			// Enable all other buttons
-			//btnDisconnect.setEnabled(true);
-			//btnOn.setEnabled(true);
-			//btnOff.setEnabled(true);
-
-		}
-	}
+                        }
 
 
-	@Override
+                    });
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        public void run() {
+                            // Actions to do after 2.5 seconds
+                            txtResponse.setText(String.valueOf(textResult));
+                            String utteranceId = this.hashCode() + "";
+                            t1.speak(String.valueOf(textResult), TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+
+                        }
+                    }, 2500);
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            // Play music
+                            if (String.valueOf(textResult).startsWith("Playing some")) {
+                                playMusic();
+                            }
+
+                            // Check weather
+                            if (String.valueOf(textResult).startsWith("Finding information about current weather")) {
+                                checkWeather();
+                            }
+
+                            // Tone Analyzer
+                            if (String.valueOf(textResult).startsWith("We will connect you to our agent")) {
+
+
+                                toneAnalyzer();
+
+                            }
+
+                            // Turn on the light
+                            if (String.valueOf(textResult).startsWith("Ok. Turning on the lights")) {
+                                if (PiConnected == false) {
+                                    new Thread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            turnOnTheLight();
+                                        }
+                                    }).start();
+                                } else {
+                                    System.out.println("Turn On");
+                                    out.println("ON");
+                                }
+                            }
+
+                            // Turn off the light
+                            if (String.valueOf(textResult).startsWith("Ok. Turning off the lights")) {
+                                turnOffTheLight();
+                            }
+                        }
+                    }, 5500);
+
+                }
+                break;
+            }
+
+        }
+    }
+
+    public boolean turnOnTheLight(){
+        try {
+            //connect("192.168.1.20", 8888);
+            // ipaddress = String that we get from database
+            socket = new java.net.Socket("172.24.36.201", 8888);
+            out = new PrintWriter(socket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            System.out.println("Connected to Rasberry Pi");
+            PiConnected = true;
+            System.out.println("Turn On");
+            out.println("ON");
+        } catch (Exception ex) {
+            System.out.println("Cannot connect to the RasPi: " + ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public boolean turnOffTheLight(){
+        try {
+
+            System.out.println("Turn Off");
+            out.println("OFF");
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public boolean toneAnalyzer() {
+        try {
+            mSocket.emit("send-message", txtSpeechInput.getText().toString());
+            System.out.println("Connecting to agent");
+
+            Toast.makeText(MainActivity.this, "Calling Hertz Customer Service", Toast.LENGTH_SHORT).show();
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:8006544173"));
+            if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                //return;
+            }
+            startActivity(callIntent);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean checkWeather() {
+        try {
+            new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
+            txtTemp.setVisibility(View.VISIBLE);
+            imageView.setVisibility(View.VISIBLE);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean playMusic() {
+        try {
+            mp = MediaPlayer.create(MainActivity.this, R.raw.janji_heroes_tonight);
+            mp.start();
+            btnStopMusic.setVisibility(View.VISIBLE);
+            playingMusic = true;
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean connect(String ipAddress, int port) {
+        // TODO Auto-generated method stub
+        boolean success;
+
+        // Attempt connection with server
+        try {
+            socket = new java.net.Socket(ipAddress, port);
+            out = new PrintWriter(socket.getOutputStream(), true);
+            in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            success = true;
+        } catch (UnknownHostException ex) {
+            System.out.println("Unknown Host. ");
+            success = false;
+        } catch (IOException ex) {
+            System.out.println("Couldn't get I/O for the connection. ");
+            success = false;
+        }
+
+        // Connection was successful
+        if (success) {
+            // Set connection status
+            //statusLabel.setText("Connected");
+
+            // Disable connect button
+            //connectButton.setEnabled(false);
+
+            // Enable all other buttons
+            //btnDisconnect.setEnabled(true);
+            //btnOn.setEnabled(true);
+            //btnOff.setEnabled(true);
+            return true;
+        }
+        return false;
+    }
+
+
+	/*@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
-	private final LocationListener locationListener = new LocationListener() {
-
-		@Override
-		public void onLocationChanged(Location location) {
-			//this.gpsLocationReceived(location);
-			new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lng)));
-		}
-
-		@Override
-		public void onProviderDisabled(String provider) {}
-
-		@Override
-		public void onProviderEnabled(String provider) {}
-
-		@Override
-		public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-	};
-
-/*
-	@Override
-	public void onLocationChanged(Location location) {
-		lat = location.getLatitude();
-		lng = location.getLongitude();
-
-		//new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lng)));
-	}
-
-	@Override
-	public void onStatusChanged(String provider, int status, Bundle extras) {
-
-	}
-
-	@Override
-	public void onProviderEnabled(String provider) {
-
-	}
-
-	@Override
-	public void onProviderDisabled(String provider) {
-
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
-					Manifest.permission.INTERNET,
-					Manifest.permission.ACCESS_COARSE_LOCATION,
-					Manifest.permission.ACCESS_FINE_LOCATION,
-					Manifest.permission.ACCESS_NETWORK_STATE,
-					Manifest.permission.SYSTEM_ALERT_WINDOW,
-					Manifest.permission.WRITE_EXTERNAL_STORAGE
-
-
-			}, MY_PERMISSION);
-		}
-		locationManager.removeUpdates(this);
-	}
-
-	@Override
-	protected void onResume() {
-		super.onResume();
-		if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-			ActivityCompat.requestPermissions(MainActivity.this, new String[]{
-					Manifest.permission.INTERNET,
-					Manifest.permission.ACCESS_COARSE_LOCATION,
-					Manifest.permission.ACCESS_FINE_LOCATION,
-					Manifest.permission.ACCESS_NETWORK_STATE,
-					Manifest.permission.SYSTEM_ALERT_WINDOW,
-					Manifest.permission.WRITE_EXTERNAL_STORAGE
-
-
-			}, MY_PERMISSION);
-		}
-		locationManager.requestLocationUpdates(provider, 400, 1, this);
-	}
 */
-	//Float Buttons moves
-	private void Move(){
-		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
-		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
 
-		paramsLeft.rightMargin = (int) (fab_Left.getWidth() * 1.3);
-		paramsTop.bottomMargin = (int) (fab_Top.getHeight() * 1.3);
+    private final LocationListener locationListener = new LocationListener() {
 
-		fab.setSize(FloatingActionButton.SIZE_MINI);
+        @Override
+        public void onLocationChanged(Location location) {
+            //this.gpsLocationReceived(location);
+            new GetWeather().execute(Common.apiRequest(String.valueOf(lat), String.valueOf(lng)));
+        }
 
-		fab_Left.setLayoutParams(paramsLeft);
-		fab_Left.startAnimation(Move_Left);
+        @Override
+        public void onProviderDisabled(String provider) {
+        }
 
-		fab_Top.setLayoutParams(paramsTop);
-		fab_Top.startAnimation(Move_Top);
+        @Override
+        public void onProviderEnabled(String provider) {
+        }
 
-	}
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+        }
 
-	//Float Buttons goes back
-	private void Back(){
-		RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
-		RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
+    };
 
-		paramsLeft.rightMargin -= (int) (fab_Left.getWidth() * 1.3);
-		paramsTop.bottomMargin -= (int) (fab_Top.getHeight() * 1.3);
+    /*
+        @Override
+        public void onLocationChanged(Location location) {
+            lat = location.getLatitude();
+            lng = location.getLongitude();
 
-		fab.setSize(FloatingActionButton.SIZE_AUTO);
+            //new GetWeather().execute(Common.apiRequest(String.valueOf(lat),String.valueOf(lng)));
+        }
 
-		fab_Left.setLayoutParams(paramsLeft);
-		fab_Left.startAnimation(Back_Left);
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
 
-		fab_Top.setLayoutParams(paramsTop);
-		fab_Top.startAnimation(Back_Top);
+        }
 
-		fab_Top.setVisibility(View.INVISIBLE);
-		fab_Left.setVisibility(View.INVISIBLE);
-	}
+        @Override
+        public void onProviderEnabled(String provider) {
 
-	private class GetWeather extends AsyncTask<String,Void,String>{
-		ProgressDialog pd = new ProgressDialog(MainActivity.this);
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+
+        @Override
+        protected void onPause() {
+            super.onPause();
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_NETWORK_STATE,
+                        Manifest.permission.SYSTEM_ALERT_WINDOW,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
 
 
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			pd.setTitle("Please wait...");
-			pd.show();
+                }, MY_PERMISSION);
+            }
+            locationManager.removeUpdates(this);
+        }
 
-		}
+        @Override
+        protected void onResume() {
+            super.onResume();
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{
+                        Manifest.permission.INTERNET,
+                        Manifest.permission.ACCESS_COARSE_LOCATION,
+                        Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.ACCESS_NETWORK_STATE,
+                        Manifest.permission.SYSTEM_ALERT_WINDOW,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
 
 
-		@Override
-		protected String doInBackground(String... params) {
-			String stream = null;
-			String urlString = params[0];
+                }, MY_PERMISSION);
+            }
+            locationManager.requestLocationUpdates(provider, 400, 1, this);
+        }
+    */
+    /*//Float Buttons moves
+    private void Move() {
+        RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
+        RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
 
-			Helper http = new Helper();
-			stream = http.getHTTPData(urlString);
-			return stream;
-		}
+        paramsLeft.rightMargin = (int) (fab_Left.getWidth() * 1.3);
+        paramsTop.bottomMargin = (int) (fab_Top.getHeight() * 1.3);
 
-		@Override
-		protected void onPostExecute(String s) {
-			super.onPostExecute(s);
-			if(s.contains("Error: Not found city")){
-				pd.dismiss();
-				return;
-			}
-			Gson gson = new Gson();
-			Type mType = new TypeToken<OpenWeatherMap>(){}.getType();
-			openWeatherMap = gson.fromJson(s,mType);
-			pd.dismiss();
+        fab.setSize(FloatingActionButton.SIZE_MINI);
 
-			//txtCity.setText(String.format("%s,%s",openWeatherMap.getName(),openWeatherMap.getSys().getCountry()));
-			//txtLastUpdate.setText(String.format("Last Updated: %s", Common.getDateNow()));
-			//txtDescription.setText(String.format("%s",openWeatherMap.getWeather().get(0).getDescription()));
-			//txtHumidity.setText(String.format("%d%%",openWeatherMap.getMain().getHumidity()));
-			//txtTime.setText(String.format("%s/%s",Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunrise()),Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunset())));
-			txtTemp.setText(String.format("%.2f °C",openWeatherMap.getMain().getTemp()));
-			Picasso.with(MainActivity.this).load(Common.getImage(openWeatherMap.getWeather().get(0).getIcon())).into(imageView);
+        fab_Left.setLayoutParams(paramsLeft);
+        fab_Left.startAnimation(Move_Left);
 
-		}
+        fab_Top.setLayoutParams(paramsTop);
+        fab_Top.startAnimation(Move_Top);
 
-	}
+    }
+
+    //Float Buttons goes back
+    private void Back() {
+        RelativeLayout.LayoutParams paramsLeft = (RelativeLayout.LayoutParams) fab_Left.getLayoutParams();
+        RelativeLayout.LayoutParams paramsTop = (RelativeLayout.LayoutParams) fab_Top.getLayoutParams();
+
+        paramsLeft.rightMargin -= (int) (fab_Left.getWidth() * 1.3);
+        paramsTop.bottomMargin -= (int) (fab_Top.getHeight() * 1.3);
+
+        fab.setSize(FloatingActionButton.SIZE_AUTO);
+
+        fab_Left.setLayoutParams(paramsLeft);
+        fab_Left.startAnimation(Back_Left);
+
+        fab_Top.setLayoutParams(paramsTop);
+        fab_Top.startAnimation(Back_Top);
+
+        fab_Top.setVisibility(View.INVISIBLE);
+        fab_Left.setVisibility(View.INVISIBLE);
+    }*/
+
+    public class GetWeather extends AsyncTask<String, Void, String> {
+        ProgressDialog pd = new ProgressDialog(MainActivity.this);
+
+
+        /*@Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pd.setTitle("Please wait...");
+            pd.show();
+
+        }*/
+
+
+        @Override
+        protected String doInBackground(String... params) {
+            String stream = null;
+            String urlString = params[0];
+
+            Helper http = new Helper();
+            stream = http.getHTTPData(urlString);
+            return stream;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            if (s.contains("Error: Not found city")) {
+                pd.dismiss();
+                return;
+            }
+            Gson gson = new Gson();
+            Type mType = new TypeToken<OpenWeatherMap>() {
+            }.getType();
+            openWeatherMap = gson.fromJson(s, mType);
+            pd.dismiss();
+
+            //txtCity.setText(String.format("%s,%s",openWeatherMap.getName(),openWeatherMap.getSys().getCountry()));
+            //txtLastUpdate.setText(String.format("Last Updated: %s", Common.getDateNow()));
+            //txtDescription.setText(String.format("%s",openWeatherMap.getWeather().get(0).getDescription()));
+            //txtHumidity.setText(String.format("%d%%",openWeatherMap.getMain().getHumidity()));
+            //txtTime.setText(String.format("%s/%s",Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunrise()),Common.unixTimeStampToDateTime(openWeatherMap.getSys().getSunset())));
+            txtTemp.setText(String.format("%.2f °C", openWeatherMap.getMain().getTemp()));
+            Picasso.with(MainActivity.this).load(Common.getImage(openWeatherMap.getWeather().get(0).getIcon())).into(imageView);
+
+        }
+
+    }
 }
