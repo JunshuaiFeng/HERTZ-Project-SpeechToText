@@ -17,8 +17,6 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.internal.matchers.MatchersPrinter;
 import org.mockito.verification.VerificationMode;
 
-
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -44,8 +42,9 @@ import static org.junit.Assert.*;
 
 public class MainActivityTest {
 
+    // throw time out exception if over 800 miliseconds
     @Rule
-    public Timeout globalTimeout= new Timeout(1000);
+    public Timeout globalTimeout= new Timeout(800);
 
     @Before
     public void setUp() throws Exception {
@@ -57,6 +56,7 @@ public class MainActivityTest {
 
     }
 
+    // Test onCreate() in MainActivity
     @Test
     public void OnCreateTest() throws Exception {
         MainActivity mainAc = Mockito.mock(MainActivity.class);
@@ -64,6 +64,7 @@ public class MainActivityTest {
         Mockito.doCallRealMethod().when(mainAc).onCreate(Bundle.EMPTY);
     }
 
+    // Test GetWeather in MainActicity
     @Test
     public void getWeatherTest() throws Exception {
         MainActivity.GetWeather mainAc = new MainActivity().new GetWeather();
@@ -85,37 +86,43 @@ public class MainActivityTest {
         Assert.assertTrue(mainAc.turnOnTheLight());
     }
 
+    // Test turn on the light (not connected to raspberry pi so assertFalse)
     @Test
     public void turnOffTheLight() throws Exception {
         MainActivity mainAc = new MainActivity();
         Assert.assertFalse(mainAc.turnOffTheLight());
     }
 
+    // Test SocketIO Connect to Bluemix Service
     @Test
     public void connectToSocketIOTest() throws Exception {
         MainActivity mainAc = new MainActivity();
         Assert.assertTrue(mainAc.ConnectToSocketIO());
     }
 
+    // Test Connect to raspberry pi (not connected to raspberry pi so assertFalse)
     @Test
     public void connectTest() throws Exception {
         MainActivity mainAc = new MainActivity();
         Assert.assertFalse(mainAc.connect("A", 8888));
     }
 
+    // Test play Music (no device so assertFalse)
     @Test
     public void playMusicTest() throws Exception {
         MainActivity mainAc = new MainActivity();
         Assert.assertFalse(mainAc.playMusic());
     }
 
-    // Failed, throw time out exception
+    // Test getting speech input from user
+    // Sometime passed sometime failed, throw time out exception
     @Test
     public void promptSpeechInput() throws Exception {
         MainActivity mainAc = Mockito.mock(MainActivity.class);
         Assert.assertFalse(mainAc.promptSpeechInput());
     }
 
+    // Test weather showing up (no device so assertFalse)
     @Test
     public void checkWeatherTest() throws Exception {
         MainActivity mainAc = new MainActivity();
@@ -123,6 +130,7 @@ public class MainActivityTest {
         Assert.assertFalse(mainAc.checkWeather());
     }
 
+    // No speech input so assertFalse
     @Test
     public void toneAnalyzerTest() throws Exception {
         MainActivity mainAc = new MainActivity();
@@ -139,6 +147,8 @@ public class MainActivityTest {
         //Assert.assertFalse(mainAc.toneAnalyzer());
     }
 
+
+    // Test weather classes in Common, Helper, Model packages
 
     @Test
     public void CloudsTest() throws Exception {
@@ -291,25 +301,12 @@ public class MainActivityTest {
         Assert.assertEquals(dateFormat.format(date), common.getDateNow());
     }
 
+    // Helper class in Heler package
     @Test
     public void HelperTest() throws Exception {
         Helper helper = new Helper();
         Assert.assertNotNull(helper);
     }
 
-    @Test
-    public void onActivityResult() throws Exception {
-
-    }
-
-    @Test
-    public void connect() throws Exception {
-
-    }
-
-    @Test
-    public void onCreateOptionsMenu() throws Exception {
-
-    }
 
 }
